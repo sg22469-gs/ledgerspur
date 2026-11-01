@@ -1,0 +1,45 @@
+name: LedgerSpur Daily Static Publisher
+
+on:
+  schedule:
+    # Runs everyday at 08:00 UTC (01:30 PM IST / 04:00 AM EST)
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Generate New Finance Guide & Update Website
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-3.5-flash
+          SITE_NAME: LedgerSpur
+          SITE_URL: https://ledgerspur.com
+        run: |
+          python main.py --run-once
+
+      - name: Commit and Push Static Site Updates
+        run: |
+          git config --global user.name "LedgerSpur Bot"
+          git config --global user.email "bot@ledgerspur.com"
+          git add index.html sitemap.xml CNAME posts/ categories/ pages/ topics.json history.json
+          git commit -m "Auto: Published daily finance guide & updated site [skip ci]" || exit 0
+          git push
