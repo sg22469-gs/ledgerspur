@@ -362,6 +362,7 @@ class SiteBuilder:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LedgerSpur - Smart Money. Sharper Moves. (US Personal Finance)</title>
   <meta name="description" content="{Config.DESCRIPTION}">
+  <meta name="fo-verify" content="03639c01-3779-4668-adc6-a6e8bd9c37d8" />
   <link rel="canonical" href="{self.site_url}/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
