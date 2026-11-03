@@ -81,6 +81,7 @@ def audit_queue():
 def rebuild_all():
     print("[+] Rebuilding all static site pages from current history...")
     builder = SiteBuilder()
+    builder.update_all_posts_schema()
     builder.build_index_page()
     builder.build_category_pages()
     builder.build_legal_pages()
