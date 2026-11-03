@@ -2,22 +2,17 @@ import json
 from datetime import datetime
 from pathlib import Path
 from config import Config
+from modules.topic_guard import TopicGuard
 
 class StateManager:
     def __init__(self):
         self.topics_file = Config.TOPICS_FILE
         self.history_file = Config.HISTORY_FILE
+        self.guard = TopicGuard()
 
-    def get_next_pending_topic(self) -> dict | None:
-        """Returns the next pending topic from topics.json."""
-        if not self.topics_file.exists():
-            return None
-        with open(self.topics_file, "r", encoding="utf-8") as f:
-            topics = json.load(f)
-        for t in topics:
-            if t.get("status") == "pending":
-                return t
-        return None
+    def get_next_pending_topic(self, bypass_48h: bool = False) -> dict | None:
+        """Returns the next pending topic that satisfies 48h AI evaluation."""
+        return self.guard.get_next_publishable_topic(bypass_48h=bypass_48h)
 
     def mark_topic_completed(self, topic_id: int, post_url: str = "", article_data: dict = None):
         """Marks a topic as completed and records timestamp and metadata."""
@@ -57,3 +52,9 @@ class StateManager:
             history.append(target)
             with open(self.history_file, "w", encoding="utf-8") as f:
                 json.dump(history, f, indent=2)
+
+        # Autonomously maintain permanent 30-topic buffer
+        try:
+            self.guard.maintain_permanent_buffer(target_pending=30)
+        except Exception as e:
+            print(f"[!] Topic buffer check: {e}")

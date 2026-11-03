@@ -396,5 +396,755 @@
     "slug": "ynab-vs-monarch-money-which-budgeting-app-actually-saves-you-more-money-in-2026",
     "meta_description": "Compare YNAB vs Monarch Money in 2026. Discover which budgeting app saves you more money and best fits your financial goals. Find your winner today!",
     "title": "YNAB vs Monarch Money: Which Budgeting App Actually Saves You More Money in 2026?"
+  },
+  {
+    "id": 21,
+    "topic": "Certificate of Deposit (CD) vs Treasury Bills: Where Should You Lock In 5% Rates?",
+    "category": "Banking",
+    "tags": [
+      "CDs",
+      "Treasury Bills",
+      "Fixed Income",
+      "Federal Reserve"
+    ],
+    "target_keyword": "cd vs treasury bills 2026",
+    "intent": "commercial",
+    "affiliate_focus": "Marcus by Goldman Sachs, Ally Bank, TreasuryDirect, Fidelity",
+    "status": "pending",
+    "projected_rpm": "$48/1000 views",
+    "mock_score": 90,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-03T19:31:45.703806"
+  },
+  {
+    "id": 22,
+    "topic": "The Best 5% Rotating Cash Back Credit Cards in the US: Maximize Groceries & Gas",
+    "category": "Credit Cards",
+    "tags": [
+      "Credit Cards",
+      "Cash Back",
+      "5 Percent Bonus",
+      "Everyday Spend"
+    ],
+    "target_keyword": "best 5 percent cash back credit cards",
+    "intent": "commercial",
+    "affiliate_focus": "Discover it Cash Back, Chase Freedom Flex, Citi Custom Cash",
+    "status": "pending",
+    "projected_rpm": "$55/1000 views",
+    "mock_score": 91,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-04T07:31:45.703806"
+  },
+  {
+    "id": 23,
+    "topic": "Backdoor Roth IRA: The Step-by-Step Playbook for High Earners to Beat IRS Income Limits",
+    "category": "Investing",
+    "tags": [
+      "Roth IRA",
+      "Backdoor Roth",
+      "IRS Rules",
+      "Taxes"
+    ],
+    "target_keyword": "backdoor roth ira guide high earners",
+    "intent": "informational",
+    "affiliate_focus": "Vanguard, Fidelity, Charles Schwab",
+    "status": "pending",
+    "projected_rpm": "$42/1000 views",
+    "mock_score": 92,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-04T19:31:45.703806"
+  },
+  {
+    "id": 24,
+    "topic": "Best Personal Loans for Fair Credit (600-660 FICO Score): Low Origination Fees & Fast Funding",
+    "category": "Loans",
+    "tags": [
+      "Personal Loans",
+      "Fair Credit",
+      "Debt Consolidation",
+      "Emergency Cash"
+    ],
+    "target_keyword": "best personal loans for fair credit 600 score",
+    "intent": "commercial",
+    "affiliate_focus": "Upgrade, Upstart, Avant, LendingPoint",
+    "status": "pending",
+    "projected_rpm": "$62/1000 views",
+    "mock_score": 93,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-05T07:31:45.703806"
+  },
+  {
+    "id": 25,
+    "topic": "Debt Avalanche vs Debt Snowball: Which Payoff Strategy Saves You More Money on Interest?",
+    "category": "Loans",
+    "tags": [
+      "Debt Payoff",
+      "Avalanche",
+      "Snowball",
+      "Credit Card Debt"
+    ],
+    "target_keyword": "debt avalanche vs debt snowball calculator",
+    "intent": "informational",
+    "affiliate_focus": "SoFi Debt Consolidation, Marcus, Discover Personal Loans",
+    "status": "pending",
+    "projected_rpm": "$38/1000 views",
+    "mock_score": 94,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-05T19:31:45.703806"
+  },
+  {
+    "id": 26,
+    "topic": "The Stealth Retirement Account: How to Maximize a Health Savings Account (HSA) for Wealth",
+    "category": "Investing",
+    "tags": [
+      "HSA",
+      "Triple Tax Advantage",
+      "Retirement",
+      "Healthcare"
+    ],
+    "target_keyword": "hsa stealth retirement strategy 2026",
+    "intent": "informational",
+    "affiliate_focus": "Lively HSA, Fidelity HSA, HealthEquity",
+    "status": "pending",
+    "projected_rpm": "$40/1000 views",
+    "mock_score": 95,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-06T07:31:45.703806"
+  },
+  {
+    "id": 27,
+    "topic": "Best 0% Balance Transfer Credit Cards with 21-Month Windows: Freeze Interest Now",
+    "category": "Credit Cards",
+    "tags": [
+      "0% APR",
+      "Balance Transfer",
+      "Debt Free",
+      "Credit Cards"
+    ],
+    "target_keyword": "best 21 month balance transfer credit cards",
+    "intent": "commercial",
+    "affiliate_focus": "Wells Fargo Reflect, Citi Simplicity, BankAmericard",
+    "status": "pending",
+    "projected_rpm": "$58/1000 views",
+    "mock_score": 96,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-06T19:31:45.703806"
+  },
+  {
+    "id": 28,
+    "topic": "High-Yield Checking Accounts Paying 4.00%+ APY: Ditch Your Big Bank's 0.01% Rate",
+    "category": "Banking",
+    "tags": [
+      "Checking Accounts",
+      "High APY",
+      "Fintech Banking",
+      "Zero Fees"
+    ],
+    "target_keyword": "best high yield checking accounts 2026",
+    "intent": "commercial",
+    "affiliate_focus": "SoFi Checking, Axos Bank Rewards Checking, Quontic Bank",
+    "status": "pending",
+    "projected_rpm": "$45/1000 views",
+    "mock_score": 97,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-07T07:31:45.703806"
+  },
+  {
+    "id": 29,
+    "topic": "How to Lower Your Mortgage Rate: 7 Proven Strategies for Refinancing and Homebuyers",
+    "category": "Loans",
+    "tags": [
+      "Mortgage",
+      "Refinance",
+      "Home Loans",
+      "Federal Reserve"
+    ],
+    "target_keyword": "how to lower mortgage rate refinance",
+    "intent": "commercial",
+    "affiliate_focus": "Rocket Mortgage, Better.com, LendingTree, Credible",
+    "status": "pending",
+    "projected_rpm": "$68/1000 views",
+    "mock_score": 98,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-07T19:31:45.703806"
+  },
+  {
+    "id": 30,
+    "topic": "Best Travel Credit Cards with Airport Lounge Access: Priority Pass & Centurion Showdown",
+    "category": "Credit Cards",
+    "tags": [
+      "Travel Cards",
+      "Lounge Access",
+      "Priority Pass",
+      "Amex Platinum"
+    ],
+    "target_keyword": "best travel credit cards airport lounge access",
+    "intent": "commercial",
+    "affiliate_focus": "Capital One Venture X, Chase Sapphire Reserve, Amex Platinum",
+    "status": "pending",
+    "projected_rpm": "$65/1000 views",
+    "mock_score": 99,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-08T07:31:45.703806"
+  },
+  {
+    "id": 31,
+    "topic": "401(k) Rollover to IRA: Step-by-Step Guide to Avoid the 20% Mandatory IRS Tax Withholding",
+    "category": "Investing",
+    "tags": [
+      "401k",
+      "Rollover IRA",
+      "Taxes",
+      "Retirement"
+    ],
+    "target_keyword": "401k rollover to ira direct transfer rules",
+    "intent": "informational",
+    "affiliate_focus": "Fidelity, Vanguard, Empower, Charles Schwab",
+    "status": "pending",
+    "projected_rpm": "$46/1000 views",
+    "mock_score": 90,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-08T19:31:45.703806"
+  },
+  {
+    "id": 32,
+    "topic": "Emergency Fund Math: Should You Keep 3, 6, or 12 Months of Expenses in Cash?",
+    "category": "Banking",
+    "tags": [
+      "Emergency Fund",
+      "Savings Strategy",
+      "Safety Net",
+      "HYSA"
+    ],
+    "target_keyword": "how much emergency fund 3 vs 6 months",
+    "intent": "informational",
+    "affiliate_focus": "Ally Bank, Marcus by Goldman Sachs, Capital One 360",
+    "status": "pending",
+    "projected_rpm": "$35/1000 views",
+    "mock_score": 91,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-09T07:31:45.703806"
+  },
+  {
+    "id": 33,
+    "topic": "Top 5 Business Credit Cards for Side Hustles and Freelancers: Maximize Tax Deductions",
+    "category": "Credit Cards",
+    "tags": [
+      "Business Cards",
+      "Side Hustle",
+      "Small Business",
+      "EIN"
+    ],
+    "target_keyword": "best business credit cards for side hustle freelancers",
+    "intent": "commercial",
+    "affiliate_focus": "Chase Ink Business Unlimited, Amex Blue Business Plus, Capital One Spark",
+    "status": "pending",
+    "projected_rpm": "$52/1000 views",
+    "mock_score": 92,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-09T19:31:45.703806"
+  },
+  {
+    "id": 34,
+    "topic": "S&P 500 Index Funds Battle: VOO vs SPY vs IVV (Which Low-Fee ETF Wins for Long-Term Wealth?)",
+    "category": "Investing",
+    "tags": [
+      "ETFs",
+      "Index Funds",
+      "VOO",
+      "S&P 500"
+    ],
+    "target_keyword": "voo vs spy vs ivv best sp 500 etf",
+    "intent": "commercial",
+    "affiliate_focus": "Vanguard, Robinhood, M1 Finance, Webull",
+    "status": "pending",
+    "projected_rpm": "$44/1000 views",
+    "mock_score": 93,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-10T07:31:45.703806"
+  },
+  {
+    "id": 35,
+    "topic": "Auto Loan Refinancing: How Americans Can Lower Their Car Payment by $120/Month",
+    "category": "Loans",
+    "tags": [
+      "Auto Loans",
+      "Car Refinance",
+      "Credit Score",
+      "Interest Rates"
+    ],
+    "target_keyword": "auto loan refinance save money low credit",
+    "intent": "commercial",
+    "affiliate_focus": "RefiJet, AutoPay, LendingTree Auto, Caribou",
+    "status": "pending",
+    "projected_rpm": "$56/1000 views",
+    "mock_score": 94,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-10T19:31:45.703806"
+  },
+  {
+    "id": 36,
+    "topic": "Federal Student Loan Payoff: IDR Plans vs Refinancing to Private Lenders Explained",
+    "category": "Loans",
+    "tags": [
+      "Student Loans",
+      "Refinance",
+      "IDR Plans",
+      "Debt Relief"
+    ],
+    "target_keyword": "federal student loan refinance vs idr plans",
+    "intent": "commercial",
+    "affiliate_focus": "SoFi Student Loans, Earnest, Laurel Road, ELFI",
+    "status": "pending",
+    "projected_rpm": "$50/1000 views",
+    "mock_score": 95,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-11T07:31:45.703806"
+  },
+  {
+    "id": 37,
+    "topic": "Buy Now, Pay Later (BNPL) Hidden Traps: Does Klarna and Affirm Ruin Your Mortgage Chances?",
+    "category": "Credit Cards",
+    "tags": [
+      "BNPL",
+      "Credit Score",
+      "Klarna",
+      "Debt Pitfalls"
+    ],
+    "target_keyword": "does bnpl hurt credit score mortgage",
+    "intent": "informational",
+    "affiliate_focus": "Experian Boost, Credit Karma, Chime Credit Builder",
+    "status": "pending",
+    "projected_rpm": "$38/1000 views",
+    "mock_score": 96,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-11T19:31:45.703806"
+  },
+  {
+    "id": 38,
+    "topic": "Best Secured Credit Cards to Rebuild Credit from 550 to 700+: Zero Hidden Annual Fees",
+    "category": "Credit Cards",
+    "tags": [
+      "Secured Cards",
+      "Bad Credit",
+      "Credit Repair",
+      "FICO"
+    ],
+    "target_keyword": "best secured credit cards rebuild bad credit",
+    "intent": "commercial",
+    "affiliate_focus": "Discover it Secured, Capital One Platinum Secured, OpenSky",
+    "status": "pending",
+    "projected_rpm": "$46/1000 views",
+    "mock_score": 97,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-12T07:31:45.703806"
+  },
+  {
+    "id": 39,
+    "topic": "Dividend Aristocrats vs Growth ETFs: How to Build Passive Income Without Depleting Capital",
+    "category": "Investing",
+    "tags": [
+      "Dividends",
+      "Passive Income",
+      "SCHD",
+      "Aristocrats"
+    ],
+    "target_keyword": "dividend aristocrats vs growth etfs passive income",
+    "intent": "informational",
+    "affiliate_focus": "Charles Schwab, Fidelity, Vanguard, M1 Finance",
+    "status": "pending",
+    "projected_rpm": "$42/1000 views",
+    "mock_score": 98,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-12T19:31:45.703806"
+  },
+  {
+    "id": 40,
+    "topic": "How to Buy US Treasury I-Bonds: Inflation-Protected Savings Guide for American Families",
+    "category": "Banking",
+    "tags": [
+      "I-Bonds",
+      "Inflation",
+      "US Treasury",
+      "Savings"
+    ],
+    "target_keyword": "how to buy i bonds treasurydirect guide",
+    "intent": "informational",
+    "affiliate_focus": "TreasuryDirect, Raisin, MaxMyInterest",
+    "status": "pending",
+    "projected_rpm": "$36/1000 views",
+    "mock_score": 99,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-13T07:31:45.703806"
+  },
+  {
+    "id": 41,
+    "topic": "Best Robo-Advisors for Hands-Off Investors: Betterment vs Wealthfront Comparison",
+    "category": "Investing",
+    "tags": [
+      "Robo Advisors",
+      "Wealthfront",
+      "Betterment",
+      "Automated Investing"
+    ],
+    "target_keyword": "betterment vs wealthfront best robo advisor 2026",
+    "intent": "commercial",
+    "affiliate_focus": "Betterment, Wealthfront, Acorns, Vanguard Digital Advisor",
+    "status": "pending",
+    "projected_rpm": "$48/1000 views",
+    "mock_score": 90,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-13T19:31:45.703806"
+  },
+  {
+    "id": 42,
+    "topic": "Term Life Insurance vs Whole Life: Why 90% of Americans Should Never Buy Whole Life",
+    "category": "Reviews",
+    "tags": [
+      "Life Insurance",
+      "Term Life",
+      "Financial Traps",
+      "Wealth Protection"
+    ],
+    "target_keyword": "term vs whole life insurance breakdown cost",
+    "intent": "commercial",
+    "affiliate_focus": "Policygenius, Haven Life, Ladder Life, Ethos",
+    "status": "pending",
+    "projected_rpm": "$60/1000 views",
+    "mock_score": 91,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-14T07:31:45.703806"
+  },
+  {
+    "id": 43,
+    "topic": "FHA Loan vs Conventional Mortgage: 3.5% Down Payment Breakdown for First-Time Buyers",
+    "category": "Loans",
+    "tags": [
+      "FHA Loans",
+      "Conventional Loans",
+      "First Time Homebuyer",
+      "Down Payment"
+    ],
+    "target_keyword": "fha vs conventional loan first time home buyer",
+    "intent": "commercial",
+    "affiliate_focus": "Rocket Mortgage, LendingTree, Guaranteed Rate",
+    "status": "pending",
+    "projected_rpm": "$64/1000 views",
+    "mock_score": 92,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-14T19:31:45.703806"
+  },
+  {
+    "id": 44,
+    "topic": "How to Call Your Credit Card Issuer and Negotiate a Lower APR (Copy-Paste Script)",
+    "category": "Credit Cards",
+    "tags": [
+      "Credit Card APR",
+      "Negotiation",
+      "Debt Hack",
+      "Interest Rates"
+    ],
+    "target_keyword": "how to negotiate credit card interest rate lower script",
+    "intent": "informational",
+    "affiliate_focus": "Gauss Money, Tally Alternatives, Upgrade Personal Loans",
+    "status": "pending",
+    "projected_rpm": "$40/1000 views",
+    "mock_score": 93,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-15T07:31:45.703806"
+  },
+  {
+    "id": 45,
+    "topic": "Top 5 Gas & Grocery Credit Cards: Beat Inflation at the Pump and Supermarket Register",
+    "category": "Credit Cards",
+    "tags": [
+      "Gas Cards",
+      "Grocery Cards",
+      "Inflation",
+      "Cash Back"
+    ],
+    "target_keyword": "best credit cards for gas and groceries cash back",
+    "intent": "commercial",
+    "affiliate_focus": "Amex Blue Cash Preferred, Capital One SavorOne, Citi Custom Cash",
+    "status": "pending",
+    "projected_rpm": "$54/1000 views",
+    "mock_score": 94,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-15T19:31:45.703806"
+  },
+  {
+    "id": 46,
+    "topic": "HSA vs FSA: Which Pre-Tax Healthcare Account Saves You More at Tax Time?",
+    "category": "Reviews",
+    "tags": [
+      "HSA",
+      "FSA",
+      "Tax Deductions",
+      "Open Enrollment"
+    ],
+    "target_keyword": "hsa vs fsa differences open enrollment 2026",
+    "intent": "informational",
+    "affiliate_focus": "Lively HSA, Fidelity HSA, HealthEquity",
+    "status": "pending",
+    "projected_rpm": "$38/1000 views",
+    "mock_score": 95,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-16T07:31:45.703806"
+  },
+  {
+    "id": 47,
+    "topic": "High-Yield Custodial Accounts for Kids & Teens: Give Your Child a $100k Head Start",
+    "category": "Banking",
+    "tags": [
+      "Custodial Accounts",
+      "UTMA",
+      "UGMA",
+      "Generational Wealth"
+    ],
+    "target_keyword": "best high yield savings account for kids teens",
+    "intent": "commercial",
+    "affiliate_focus": "Capital One Kids Savings, Ally Custodial, Greenlight",
+    "status": "pending",
+    "projected_rpm": "$45/1000 views",
+    "mock_score": 96,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-16T19:31:45.703806"
+  },
+  {
+    "id": 48,
+    "topic": "Best Real Estate Bookkeeping & Budgeting Software for Landlords with 1-10 Units",
+    "category": "Reviews",
+    "tags": [
+      "Real Estate",
+      "Landlord Software",
+      "Rental Property",
+      "Bookkeeping"
+    ],
+    "target_keyword": "best bookkeeping software rental property landlords",
+    "intent": "commercial",
+    "affiliate_focus": "Stessa, Baselane, TenantCloud, QuickBooks",
+    "status": "pending",
+    "projected_rpm": "$50/1000 views",
+    "mock_score": 97,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-17T07:31:45.703806"
+  },
+  {
+    "id": 49,
+    "topic": "How to Avoid the 10% Early 401(k) Withdrawal Penalty: Rule of 55 and SEPP Plans",
+    "category": "Investing",
+    "tags": [
+      "401k Penalty",
+      "Early Retirement",
+      "Rule of 55",
+      "FIRE"
+    ],
+    "target_keyword": "how to withdraw 401k without penalty rule of 55",
+    "intent": "informational",
+    "affiliate_focus": "Empower, Vanguard, Fidelity Personal Advisor",
+    "status": "pending",
+    "projected_rpm": "$44/1000 views",
+    "mock_score": 98,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-17T19:31:45.703806"
+  },
+  {
+    "id": 50,
+    "topic": "Umbrella Insurance: Why American Homeowners Need $1 Million Coverage for $25/Month",
+    "category": "Reviews",
+    "tags": [
+      "Umbrella Insurance",
+      "Asset Protection",
+      "Liability",
+      "Net Worth"
+    ],
+    "target_keyword": "is umbrella insurance worth it cost coverage",
+    "intent": "commercial",
+    "affiliate_focus": "Policygenius, Geico Umbrella, State Farm, Progressive",
+    "status": "pending",
+    "projected_rpm": "$58/1000 views",
+    "mock_score": 99,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-18T07:31:45.703806"
   }
 ]

@@ -1,10 +1,24 @@
-name: LedgerSpur Daily Static Publisher
+name: LedgerSpur Autonomous Multi-Slot Publisher
 
 on:
   schedule:
-    # Runs everyday at 08:00 UTC (01:30 PM IST / 04:00 AM EST)
-    - cron: '0 8 * * *'
+    # Slot 1 & 2: Daily 2 Regular Flagship Posts (08:00 AM EST & 06:00 PM EST / 13:00 UTC & 23:00 UTC)
+    - cron: '0 13,23 * * *'
+    # Slot 3: Golden-Time Trending Post Segment (Alternate Days: Mon, Wed, Fri at 01:00 PM EST / 18:00 UTC)
+    - cron: '0 18 * * 1,3,5'
   workflow_dispatch:
+    inputs:
+      segment:
+        description: 'Publishing Segment'
+        required: true
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - regular
+          - trending
+          - mock-audit
+          - replenish
 
 permissions:
   contents: write
@@ -27,19 +41,38 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Generate New Finance Guide & Update Website
+      - name: Pre-Publish Topic Buffer & 48h Mock Audit
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python main.py --replenish
+          python main.py --mock-audit
+
+      - name: Generate & Publish Finance Article
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-3.5-flash
           SITE_NAME: LedgerSpur
           SITE_URL: https://ledgerspur.com
+          EVENT_CRON: ${{ github.event.schedule }}
+          INPUT_SEGMENT: ${{ github.event.inputs.segment }}
         run: |
-          python main.py --run-once
+          if [ "$INPUT_SEGMENT" = "trending" ] || [ "$EVENT_CRON" = "0 18 * * 1,3,5" ]; then
+            echo "[⚡] Executing Golden-Time Trending Post Segment..."
+            python main.py --trending
+          elif [ "$INPUT_SEGMENT" = "mock-audit" ]; then
+            echo "[*] Mock audit finished."
+          elif [ "$INPUT_SEGMENT" = "replenish" ]; then
+            echo "[*] Buffer replenishment finished."
+          else
+            echo "[+] Executing Regular Daily Post Slot..."
+            python main.py --run-once
+          fi
 
       - name: Commit and Push Static Site Updates
         run: |
           git config --global user.name "LedgerSpur Bot"
           git config --global user.email "bot@ledgerspur.com"
           git add index.html sitemap.xml CNAME posts/ categories/ pages/ topics.json history.json
-          git commit -m "Auto: Published daily finance guide & updated site [skip ci]" || exit 0
+          git commit -m "Auto: Published finance guide & updated topics buffer" || exit 0
           git push
