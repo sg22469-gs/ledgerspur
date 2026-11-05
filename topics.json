@@ -410,7 +410,7 @@
     "target_keyword": "cd vs treasury bills 2026",
     "intent": "commercial",
     "affiliate_focus": "Marcus by Goldman Sachs, Ally Bank, TreasuryDirect, Fidelity",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": "$48/1000 views",
     "mock_score": 90,
     "mock_verdict": "APPROVED",
@@ -420,7 +420,12 @@
       "seo_competition_opportunity": "High Gap / Long-tail Commercial",
       "audit_date": "2026-11-03T19:31:45.703806"
     },
-    "eligible_at": "2026-11-03T19:31:45.703806"
+    "eligible_at": "2026-11-03T19:31:45.703806",
+    "published_at": "2026-11-05T23:39:46.786176",
+    "url": "https://ledgerspur.com/posts/certificate-of-deposit-cd-vs-treasury-bills-where-should-you-lock-in-5-rates.html",
+    "slug": "certificate-of-deposit-cd-vs-treasury-bills-where-should-you-lock-in-5-rates",
+    "meta_description": "Compare CDs vs Treasury Bills to lock in 5% interest rates. Learn how taxes, liquidity, and safety impact your yields to pick the best US investment.",
+    "title": "Certificate of Deposit (CD) vs Treasury Bills: Where Should You Lock In 5% Rates?"
   },
   {
     "id": 22,
@@ -1146,5 +1151,29 @@
       "audit_date": "2026-11-03T19:31:45.703806"
     },
     "eligible_at": "2026-11-18T07:31:45.703806"
+  },
+  {
+    "id": 51,
+    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "category": "Credit Cards",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "intent": "commercial",
+    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "status": "pending",
+    "projected_rpm": "$45 - $60/1000 views",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-05T23:39:46.853718"
+    },
+    "mocked_at": "2026-11-05T23:39:46.853718",
+    "eligible_at": "2026-11-07T23:39:46.853718"
   }
 ]

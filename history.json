@@ -399,5 +399,35 @@
     "slug": "ynab-vs-monarch-money-which-budgeting-app-actually-saves-you-more-money-in-2026",
     "meta_description": "Compare YNAB vs Monarch Money in 2026. Discover which budgeting app saves you more money and best fits your financial goals. Find your winner today!",
     "title": "YNAB vs Monarch Money: Which Budgeting App Actually Saves You More Money in 2026?"
+  },
+  {
+    "id": 21,
+    "topic": "Certificate of Deposit (CD) vs Treasury Bills: Where Should You Lock In 5% Rates?",
+    "category": "Banking",
+    "tags": [
+      "CDs",
+      "Treasury Bills",
+      "Fixed Income",
+      "Federal Reserve"
+    ],
+    "target_keyword": "cd vs treasury bills 2026",
+    "intent": "commercial",
+    "affiliate_focus": "Marcus by Goldman Sachs, Ally Bank, TreasuryDirect, Fidelity",
+    "status": "published",
+    "projected_rpm": "$48/1000 views",
+    "mock_score": 90,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-03T19:31:45.703806",
+    "published_at": "2026-11-05T23:39:46.786176",
+    "url": "https://ledgerspur.com/posts/certificate-of-deposit-cd-vs-treasury-bills-where-should-you-lock-in-5-rates.html",
+    "slug": "certificate-of-deposit-cd-vs-treasury-bills-where-should-you-lock-in-5-rates",
+    "meta_description": "Compare CDs vs Treasury Bills to lock in 5% interest rates. Learn how taxes, liquidity, and safety impact your yields to pick the best US investment.",
+    "title": "Certificate of Deposit (CD) vs Treasury Bills: Where Should You Lock In 5% Rates?"
   }
 ]

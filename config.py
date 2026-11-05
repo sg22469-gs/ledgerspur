@@ -18,7 +18,7 @@ class Config:
 
     # 2. Gemini AI Engine
     GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
 
     # 3. Static Site Directory Layout
     POSTS_DIR = BASE_DIR / "posts"

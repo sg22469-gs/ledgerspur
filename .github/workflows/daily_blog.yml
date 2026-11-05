@@ -66,7 +66,7 @@ jobs:
       - name: Generate & Publish Finance Article
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: gemini-3.5-flash
+          GEMINI_MODEL: gemini-3.6-flash
           SITE_NAME: LedgerSpur
           SITE_URL: https://ledgerspur.com
           EVENT_CRON: ${{ github.event.schedule }}
