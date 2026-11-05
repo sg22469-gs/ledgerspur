@@ -58,3 +58,34 @@ class StateManager:
             self.guard.maintain_permanent_buffer(target_pending=30)
         except Exception as e:
             print(f"[!] Topic buffer check: {e}")
+
+    def record_emergency_publication(self, article_data: dict, post_url: str) -> dict:
+        """Records an emergency buffer publication in history.json."""
+        history = []
+        if self.history_file.exists():
+            try:
+                with open(self.history_file, "r", encoding="utf-8") as f:
+                    history = json.load(f)
+            except Exception:
+                history = []
+        max_id = max([h.get("id", 0) for h in history]) if history else 0
+        entry = {
+            "id": max_id + 1,
+            "topic": article_data.get("title"),
+            "category": article_data.get("category", "Banking"),
+            "tags": article_data.get("tags", ["Finance", "Emergency Buffer"]),
+            "target_keyword": article_data.get("slug", "").replace("-", " "),
+            "intent": "commercial",
+            "affiliate_focus": "Top US Providers",
+            "status": "published",
+            "published_at": datetime.now().isoformat(),
+            "url": post_url,
+            "slug": article_data.get("slug"),
+            "meta_description": article_data.get("meta_description"),
+            "title": article_data.get("title"),
+            "is_emergency_buffer": True
+        }
+        history.append(entry)
+        with open(self.history_file, "w", encoding="utf-8") as f:
+            json.dump(history, f, indent=2, ensure_ascii=False)
+        return entry

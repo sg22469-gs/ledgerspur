@@ -298,3 +298,19 @@ IMPORTANT: Output ONLY the HTML content. Do NOT wrap inside markdown backticks (
   <a href="#apply" class="ls-cta-button">View Current Rates on LedgerSpur &rarr;</a>
 </p>
 """
+
+    def generate_fallback_direct(self, topic_data: dict) -> dict:
+        """Returns a complete structured article dict in emergency fallback mode."""
+        topic = topic_data.get("topic", "US Personal Finance Guide")
+        category = topic_data.get("category", "Banking")
+        slug = re.sub(r'[^a-zA-Z0-9]+', '-', topic.lower()).strip('-')
+        html = self._generate_fallback_article(topic_data)
+        return {
+            "title": topic,
+            "category": category,
+            "tags": topic_data.get("tags", [category, "Finance"]),
+            "slug": slug,
+            "meta_description": f"Complete guide on {topic} for US consumers by LedgerSpur Editorial Desk.",
+            "html_content": html,
+        }
+

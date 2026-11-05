@@ -27,3 +27,4 @@ class Config:
     ASSETS_DIR = BASE_DIR / "assets"
     TOPICS_FILE = BASE_DIR / "topics.json"
     HISTORY_FILE = BASE_DIR / "history.json"
+    BUFFER_FILE = BASE_DIR / "buffer_pool.json"

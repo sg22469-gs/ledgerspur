@@ -15,6 +15,7 @@
   * **Slot 2 (Evening Review):** 06:00 PM EST (23:00 UTC / 04:30 AM IST)
   * **Slot 3 (Golden-Time Trending Segment):** Alternate Days (Mon, Wed, Fri at 01:00 PM EST / 18:00 UTC / 11:30 PM IST)
 * **Pre-Publishing Quality Gate:** **48-Hour AI Mock & Simulation Gate** (`modules/topic_guard.py`) evaluates commercial intent, projected RPM ($35-$68+), CTR hook strength, and affiliate fit before any post is allowed to publish.
+* **Emergency Post Buffer Gate:** **Self-Healing Buffer Pool (`modules/buffer_manager.py`)** permanently maintains **5 pre-rendered flagship posts** in `buffer_pool.json`. If AI APIs face rate limits or 503 outages, an emergency post is deployed instantly without missing a slot; once AI recovers, the pool is autonomously refilled to 5.
 * **Topic Inventory:** Permanently maintained at **30+ pending topics** with autonomous replenishment.
 
 ---
@@ -56,3 +57,4 @@
 4. **Multi-Slot Publishing Velocity Configured:** 2 regular daily slots + 1 alternate-day Golden-Time trending slot.
 5. **48-Hour AI Pre-Publishing Mock Audit Gate:** Integrated into `main.py` and `modules/topic_guard.py`.
 6. **30 High-RPM US Finance Topics Database:** Seeded and scored into `topics.json` with autonomous buffer maintainer.
+7. **Emergency Buffer Pool & Self-Healing Resilience Gate:** Integrated `modules/buffer_manager.py` with 5 pre-rendered reserve articles in `buffer_pool.json` guaranteeing zero publishing disruption.

@@ -4,6 +4,7 @@ from modules.content_generator import ContentGenerator
 from modules.site_builder import SiteBuilder
 from modules.state_manager import StateManager
 from modules.topic_guard import TopicGuard
+from modules.buffer_manager import BufferManager
 from config import Config
 
 # Ensure clean UTF-8 output on Windows consoles
@@ -35,11 +36,31 @@ def run_single_pipeline(topic_data: dict = None, is_trending: bool = False):
     if topic_data.get("mock_score"):
         print(f"[+] 48-Hour AI Mock Score: {topic_data.get('mock_score')}/100 | Projected RPM: {topic_data.get('projected_rpm')}")
 
-    # 1. Generate Article
-    print("[+] Invoking Gemini AI Content Engine for LedgerSpur...")
+    # 1. Generate Article with Emergency Buffer Fallback & Self-Healing Refill Gate
     generator = ContentGenerator()
-    article = generator.generate_article(topic_data)
-    print(f"[+] Article generated successfully: {len(article['html_content'])} characters.")
+    buffer_mgr = BufferManager()
+    article = None
+    is_emergency_fallback = False
+
+    try:
+        print("[+] Invoking Gemini AI Content Engine for LedgerSpur...")
+        article = generator.generate_article(topic_data)
+        print(f"[+] Article generated successfully: {len(article['html_content'])} characters.")
+
+        # Self-healing: live AI is functional! Check if emergency buffer pool needs replenishment
+        if buffer_mgr.get_deficit() > 0:
+            print("[+] Live AI operational. Checking emergency buffer reserve...")
+            buffer_mgr.refill_buffer(generator=generator)
+    except Exception as e:
+        print(f"[!] Warning: Live AI Generation failed ({e})")
+        print("[⚡] Activating Emergency Buffer Pool Fallback...")
+        article = buffer_mgr.pop_buffer_post()
+        if article:
+            is_emergency_fallback = True
+            print(f"[✓] Successfully retrieved pre-generated buffer article: '{article['title']}'")
+        else:
+            print("[!] Emergency buffer pool empty. Using deterministic fallback engine...")
+            article = generator.generate_fallback_direct(topic_data)
 
     # 2. Build Standalone Post Page
     post_file = site_builder.build_post_page(article)
@@ -47,8 +68,12 @@ def run_single_pipeline(topic_data: dict = None, is_trending: bool = False):
 
     # 3. Update State
     post_url = f"{Config.SITE_URL}/posts/{article['slug']}.html"
-    state_mgr.mark_topic_completed(topic_data.get("id"), post_url=post_url, article_data=article)
-    print(f"[+] Topic #{topic_data.get('id')} recorded in state manager.")
+    if is_emergency_fallback:
+        state_mgr.record_emergency_publication(article, post_url=post_url)
+        print(f"[+] Emergency buffer post '{article['title']}' recorded in history.json.")
+    else:
+        state_mgr.mark_topic_completed(topic_data.get("id"), post_url=post_url, article_data=article)
+        print(f"[+] Topic #{topic_data.get('id')} recorded in state manager.")
 
     # 4. Rebuild Index, Categories & Sitemap
     print("[+] Rebuilding homepage, category pages, legal pages and sitemap...")
@@ -97,6 +122,8 @@ def main():
     parser.add_argument("--seed", type=int, default=0, help="Generate N flagship seed articles")
     parser.add_argument("--rebuild", action="store_true", help="Rebuild homepage, categories, legal pages & sitemap")
     parser.add_argument("--list", action="store_true", help="List all pending topics")
+    parser.add_argument("--refill-buffer", action="store_true", help="Check and refill pre-generated emergency buffer post pool")
+    parser.add_argument("--buffer-status", action="store_true", help="Display current status of emergency buffer pool")
 
     args = parser.parse_args()
 
@@ -107,6 +134,29 @@ def main():
     if args.replenish:
         guard = TopicGuard()
         guard.maintain_permanent_buffer(target_pending=30)
+        return
+
+    if args.buffer_status:
+        buffer_mgr = BufferManager()
+        report = buffer_mgr.get_status_report()
+        print("\n=======================================================")
+        print("   [TALON] LedgerSpur Emergency Post Buffer Status     ")
+        print("=======================================================")
+        print(f"Current Reserve: {report['current_count']} / {report['target_count']} articles")
+        print(f"Deficit: {report['deficit']}")
+        if report['articles']:
+            print("\nPre-generated reserve articles waiting in pool:")
+            for i, a in enumerate(report['articles'], 1):
+                print(f"  {i}. [{a['category']}] {a['title']}")
+        else:
+            print("  (Pool is empty! Run --refill-buffer to populate reserve.)")
+        print("=======================================================\n")
+        return
+
+    if args.refill_buffer:
+        buffer_mgr = BufferManager()
+        generator = ContentGenerator()
+        buffer_mgr.refill_buffer(generator=generator)
         return
 
     if args.list:
