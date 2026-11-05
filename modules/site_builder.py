@@ -402,7 +402,8 @@ class SiteBuilder:
             # 3. Inject cleanly before </head>
             if "</head>" in cleaned_html:
                 head_part, body_part = cleaned_html.split("</head>", 1)
-                head_part = re.sub(r'<!-- Triple Google Rich Snippets.*?-->\s*<script type="application/ld\+json">.*?</script>\s*', '', head_part, flags=re.DOTALL)
+                head_part = re.sub(r'<!-- Triple Google Rich Snippets.*?-->\s*', '', head_part, flags=re.DOTALL)
+                head_part = re.sub(r'<script type="application/ld\+json">.*?</script>\s*', '', head_part, flags=re.DOTALL)
                 new_html = head_part.rstrip() + "\n" + schema_tag + "\n</head>" + body_part
                 pf.write_text(new_html, encoding="utf-8")
                 updated_count += 1
