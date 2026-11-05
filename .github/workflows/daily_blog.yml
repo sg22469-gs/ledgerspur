@@ -30,6 +30,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -40,6 +43,18 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
+
+      - name: Check Environment & Secrets
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "[!] ERROR: GEMINI_API_KEY secret is MISSING in this GitHub repository!"
+            echo "[!] Please add your Gemini API Key at: https://github.com/${{ github.repository }}/settings/secrets/actions"
+            exit 1
+          else
+            echo "[✓] GEMINI_API_KEY secret detected."
+          fi
 
       - name: Pre-Publish Topic Buffer & 48h Mock Audit
         env:
@@ -58,7 +73,7 @@ jobs:
           INPUT_SEGMENT: ${{ github.event.inputs.segment }}
         run: |
           if [ "$INPUT_SEGMENT" = "trending" ] || [ "$EVENT_CRON" = "0 18 * * 1,3,5" ]; then
-            echo "[⚡] Executing Golden-Time Trending Post Segment..."
+            echo "[*] Executing Golden-Time Trending Post Segment..."
             python main.py --trending
           elif [ "$INPUT_SEGMENT" = "mock-audit" ]; then
             echo "[*] Mock audit finished."
@@ -73,6 +88,7 @@ jobs:
         run: |
           git config --global user.name "LedgerSpur Bot"
           git config --global user.email "bot@ledgerspur.com"
-          git add index.html sitemap.xml CNAME posts/ categories/ pages/ topics.json history.json
+          git add .
           git commit -m "Auto: Published finance guide & updated topics buffer" || exit 0
-          git push
+          git pull --rebase origin main
+          git push origin main
