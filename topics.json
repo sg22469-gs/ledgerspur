@@ -620,7 +620,7 @@
     "target_keyword": "best high yield checking accounts 2026",
     "intent": "commercial",
     "affiliate_focus": "SoFi Checking, Axos Bank Rewards Checking, Quontic Bank",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": "$45/1000 views",
     "mock_score": 97,
     "mock_verdict": "APPROVED",
@@ -630,7 +630,12 @@
       "seo_competition_opportunity": "High Gap / Long-tail Commercial",
       "audit_date": "2026-11-03T19:31:45.703806"
     },
-    "eligible_at": "2026-11-07T07:31:45.703806"
+    "eligible_at": "2026-11-07T07:31:45.703806",
+    "published_at": "2026-11-08T23:31:37.346477",
+    "url": "https://ledgerspur.com/posts/high-yield-checking-accounts-paying-4-00-apy-ditch-your-big-bank-s-0-01-rate.html",
+    "slug": "high-yield-checking-accounts-paying-4-00-apy-ditch-your-big-bank-s-0-01-rate",
+    "meta_description": "Ditch big banks that pay 0.01% APY. Discover the best high-yield checking accounts offering 4.00%+ APY and maximize your everyday cash earnings today.",
+    "title": "High-Yield Checking Accounts Paying 4.00%+ APY: Ditch Your Big Bank's 0.01% Rate"
   },
   {
     "id": 29,
@@ -1349,5 +1354,29 @@
     },
     "mocked_at": "2026-11-08T13:46:13.315155",
     "eligible_at": "2026-11-10T13:46:13.315155"
+  },
+  {
+    "id": 58,
+    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "category": "Credit Cards",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "intent": "commercial",
+    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "status": "pending",
+    "projected_rpm": "$45 - $60/1000 views",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-08T23:31:37.348666"
+    },
+    "mocked_at": "2026-11-08T23:31:37.348666",
+    "eligible_at": "2026-11-10T23:31:37.348666"
   }
 ]
