@@ -800,7 +800,7 @@
     "target_keyword": "voo vs spy vs ivv best sp 500 etf",
     "intent": "commercial",
     "affiliate_focus": "Vanguard, Robinhood, M1 Finance, Webull",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": "$44/1000 views",
     "mock_score": 93,
     "mock_verdict": "APPROVED",
@@ -810,7 +810,12 @@
       "seo_competition_opportunity": "High Gap / Long-tail Commercial",
       "audit_date": "2026-11-03T19:31:45.703806"
     },
-    "eligible_at": "2026-11-10T07:31:45.703806"
+    "eligible_at": "2026-11-10T07:31:45.703806",
+    "published_at": "2026-11-12T03:42:21.037648",
+    "url": "https://ledgerspur.com/posts/s-p-500-index-funds-battle-voo-vs-spy-vs-ivv-which-low-fee-etf-wins-for-long-term-wealth.html",
+    "slug": "s-p-500-index-funds-battle-voo-vs-spy-vs-ivv-which-low-fee-etf-wins-for-long-term-wealth",
+    "meta_description": "Compare VOO vs SPY vs IVV to discover the best low-fee S&P 500 ETF. Evaluate expense ratios, liquidity, and returns to maximize your long-term wealth.",
+    "title": "S&P 500 Index Funds Battle: VOO vs SPY vs IVV (Which Low-Fee ETF Wins for Long-Term Wealth?)"
   },
   {
     "id": 35,
@@ -1523,5 +1528,29 @@
     },
     "mocked_at": "2026-11-11T20:05:15.186742",
     "eligible_at": "2026-11-13T20:05:15.186742"
+  },
+  {
+    "id": 64,
+    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "category": "Credit Cards",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "intent": "commercial",
+    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "status": "pending",
+    "projected_rpm": "$45 - $60/1000 views",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-12T03:42:21.040356"
+    },
+    "mocked_at": "2026-11-12T03:42:21.040356",
+    "eligible_at": "2026-11-14T03:42:21.040356"
   }
 ]
