@@ -849,5 +849,35 @@
     "slug": "auto-loan-refinancing-how-americans-can-lower-their-car-payment-by-120-month",
     "meta_description": "Lower your car payment today! Learn how auto loan refinancing helps Americans save $120 monthly with lower rates. Reduce your monthly car payment now.",
     "title": "Auto Loan Refinancing: How Americans Can Lower Their Car Payment by $120/Month"
+  },
+  {
+    "id": 36,
+    "topic": "Federal Student Loan Payoff: IDR Plans vs Refinancing to Private Lenders Explained",
+    "category": "Loans",
+    "tags": [
+      "Student Loans",
+      "Refinance",
+      "IDR Plans",
+      "Debt Relief"
+    ],
+    "target_keyword": "federal student loan refinance vs idr plans",
+    "intent": "commercial",
+    "affiliate_focus": "SoFi Student Loans, Earnest, Laurel Road, ELFI",
+    "status": "published",
+    "projected_rpm": "$50/1000 views",
+    "mock_score": 95,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-11T07:31:45.703806",
+    "published_at": "2026-11-13T03:25:29.963883",
+    "url": "https://ledgerspur.com/posts/federal-student-loan-payoff-idr-plans-vs-refinancing-to-private-lenders-explained.html",
+    "slug": "federal-student-loan-payoff-idr-plans-vs-refinancing-to-private-lenders-explained",
+    "meta_description": "Compare IDR plans vs refinancing federal student loans to private lenders. Discover pros, cons, and choose the best payoff strategy for your finances.",
+    "title": "Federal Student Loan Payoff: IDR Plans vs Refinancing to Private Lenders Explained"
   }
 ]

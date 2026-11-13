@@ -860,7 +860,7 @@
     "target_keyword": "federal student loan refinance vs idr plans",
     "intent": "commercial",
     "affiliate_focus": "SoFi Student Loans, Earnest, Laurel Road, ELFI",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": "$50/1000 views",
     "mock_score": 95,
     "mock_verdict": "APPROVED",
@@ -870,7 +870,12 @@
       "seo_competition_opportunity": "High Gap / Long-tail Commercial",
       "audit_date": "2026-11-03T19:31:45.703806"
     },
-    "eligible_at": "2026-11-11T07:31:45.703806"
+    "eligible_at": "2026-11-11T07:31:45.703806",
+    "published_at": "2026-11-13T03:25:29.963883",
+    "url": "https://ledgerspur.com/posts/federal-student-loan-payoff-idr-plans-vs-refinancing-to-private-lenders-explained.html",
+    "slug": "federal-student-loan-payoff-idr-plans-vs-refinancing-to-private-lenders-explained",
+    "meta_description": "Compare IDR plans vs refinancing federal student loans to private lenders. Discover pros, cons, and choose the best payoff strategy for your finances.",
+    "title": "Federal Student Loan Payoff: IDR Plans vs Refinancing to Private Lenders Explained"
   },
   {
     "id": 37,
@@ -1581,5 +1586,29 @@
     },
     "mocked_at": "2026-11-12T20:43:38.037923",
     "eligible_at": "2026-11-14T20:43:38.037923"
+  },
+  {
+    "id": 66,
+    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "category": "Credit Cards",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "intent": "commercial",
+    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "status": "pending",
+    "projected_rpm": "$45 - $60/1000 views",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-13T03:25:29.968573"
+    },
+    "mocked_at": "2026-11-13T03:25:29.968573",
+    "eligible_at": "2026-11-15T03:25:29.968573"
   }
 ]
