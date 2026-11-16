@@ -4,8 +4,3 @@ main = "_worker.js"
 
 # Cloudflare Static Assets configuration
 assets = { directory = "." }
-
-routes = [
-  { pattern = "ledgerspur.com/*", zone_name = "ledgerspur.com" },
-  { pattern = "www.ledgerspur.com/*", zone_name = "ledgerspur.com" }
-]

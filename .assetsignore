@@ -1,0 +1,13 @@
+.git/
+.github/
+.venv/
+__pycache__/
+*.py
+*.pyc
+.env*
+requirements.txt
+history.json
+topics.json
+wrangler.toml
+package.json
+package-lock.json
