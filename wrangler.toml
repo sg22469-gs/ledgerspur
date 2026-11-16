@@ -2,5 +2,6 @@ name = "ledgerspur"
 compatibility_date = "2024-09-23"
 main = "_worker.js"
 
-# Cloudflare Static Assets configuration
-assets = { directory = ".", binding = "ASSETS" }
+[assets]
+directory = "."
+binding = "ASSETS"
