@@ -1149,5 +1149,35 @@
     "slug": "top-5-gas-grocery-credit-cards-beat-inflation-at-the-pump-and-supermarket-register",
     "meta_description": "Beat inflation with our top 5 gas and grocery credit cards. Maximize your rewards and save money at the pump and checkout with these expert picks today.",
     "title": "Top 5 Gas & Grocery Credit Cards: Beat Inflation at the Pump and Supermarket Register"
+  },
+  {
+    "id": 46,
+    "topic": "HSA vs FSA: Which Pre-Tax Healthcare Account Saves You More at Tax Time?",
+    "category": "Reviews",
+    "tags": [
+      "HSA",
+      "FSA",
+      "Tax Deductions",
+      "Open Enrollment"
+    ],
+    "target_keyword": "hsa vs fsa differences open enrollment 2026",
+    "intent": "informational",
+    "affiliate_focus": "Lively HSA, Fidelity HSA, HealthEquity",
+    "status": "published",
+    "projected_rpm": "$38/1000 views",
+    "mock_score": 95,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "8/10",
+      "affiliate_readiness": "High Conversion (Top Tier US Networks)",
+      "seo_competition_opportunity": "High Gap / Long-tail Commercial",
+      "audit_date": "2026-11-03T19:31:45.703806"
+    },
+    "eligible_at": "2026-11-16T07:31:45.703806",
+    "published_at": "2026-11-18T04:06:29.885949",
+    "url": "https://ledgerspur.com/posts/hsa-vs-fsa-which-pre-tax-healthcare-account-saves-you-more-at-tax-time.html",
+    "slug": "hsa-vs-fsa-which-pre-tax-healthcare-account-saves-you-more-at-tax-time",
+    "meta_description": "Compare HSA vs FSA healthcare accounts to maximize your tax savings. Learn contribution limits, rollover rules, and which pre-tax option fits best.",
+    "title": "HSA vs FSA: Which Pre-Tax Healthcare Account Saves You More at Tax Time?"
   }
 ]
