@@ -1299,5 +1299,34 @@
     "slug": "umbrella-insurance-why-american-homeowners-need-1-million-coverage-for-25-month",
     "meta_description": "Protect your home and savings with $1 million in umbrella insurance for $25/month. Learn why US homeowners need affordable extra liability protection.",
     "title": "Umbrella Insurance: Why American Homeowners Need $1 Million Coverage for $25/Month"
+  },
+  {
+    "id": 51,
+    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "category": "Credit Cards",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "intent": "commercial",
+    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "status": "published",
+    "projected_rpm": "$45 - $60/1000 views",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-05T23:39:46.853718"
+    },
+    "mocked_at": "2026-11-05T23:39:46.853718",
+    "eligible_at": "2026-11-07T23:39:46.853718",
+    "published_at": "2026-11-20T20:59:00.469453",
+    "url": "https://ledgerspur.com/posts/top-5-cash-back-cards-with-no-foreign-transaction-fees-for-us-travelers-2026-guide.html",
+    "slug": "top-5-cash-back-cards-with-no-foreign-transaction-fees-for-us-travelers-2026-guide",
+    "meta_description": "Maximize your global travel savings with our 2026 guide to the top 5 cash back credit cards with zero foreign transaction fees for US travelers.",
+    "title": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)"
   }
 ]
