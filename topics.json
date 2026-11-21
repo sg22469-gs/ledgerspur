@@ -1367,7 +1367,7 @@
     "target_keyword": "top 5 cash back cards with no foreign transaction ",
     "intent": "commercial",
     "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": "$45 - $60/1000 views",
     "mock_score": 88,
     "mock_verdict": "APPROVED",
@@ -1377,7 +1377,12 @@
       "audit_timestamp": "2026-11-06T14:07:35.168825"
     },
     "mocked_at": "2026-11-06T14:07:35.168825",
-    "eligible_at": "2026-11-08T14:07:35.168825"
+    "eligible_at": "2026-11-08T14:07:35.168825",
+    "published_at": "2026-11-21T20:01:14.498679",
+    "url": "https://ledgerspur.com/posts/top-5-cash-back-cards-with-no-foreign-transaction-fees-for-us-travelers-2026-guide.html",
+    "slug": "top-5-cash-back-cards-with-no-foreign-transaction-fees-for-us-travelers-2026-guide",
+    "meta_description": "Save money abroad with the top 5 US cash back credit cards featuring no foreign transaction fees. Compare rewards and find your best 2026 travel card!",
+    "title": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)"
   },
   {
     "id": 54,
@@ -2074,5 +2079,29 @@
     },
     "mocked_at": "2026-11-21T03:52:14.256791",
     "eligible_at": "2026-11-23T03:52:14.256791"
+  },
+  {
+    "id": 83,
+    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "category": "Credit Cards",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "intent": "commercial",
+    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "status": "pending",
+    "projected_rpm": "$45 - $60/1000 views",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-21T20:01:14.502102"
+    },
+    "mocked_at": "2026-11-21T20:01:14.502102",
+    "eligible_at": "2026-11-23T20:01:14.502102"
   }
 ]
