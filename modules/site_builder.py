@@ -270,10 +270,27 @@ class SiteBuilder:
         }
         return fallback_map.get(cat, fallback_map["Banking"])
 
+    def _get_og_image_info(self, category: str) -> tuple:
+        """Returns (filename, absolute_url) for the most appropriate 1200x630 OpenGraph banner."""
+        cat_lower = (category or "").lower()
+        if "card" in cat_lower:
+            fn = "og-credit-cards.png"
+        elif "bank" in cat_lower or "hysa" in cat_lower or "saving" in cat_lower or "cd" in cat_lower or "checking" in cat_lower:
+            fn = "og-banking.png"
+        elif "invest" in cat_lower or "roth" in cat_lower or "401" in cat_lower or "stock" in cat_lower or "fund" in cat_lower or "ira" in cat_lower:
+            fn = "og-investing.png"
+        elif "loan" in cat_lower or "debt" in cat_lower or "mortgage" in cat_lower:
+            fn = "og-loans.png"
+        elif "review" in cat_lower or "app" in cat_lower or "vs" in cat_lower:
+            fn = "og-reviews.png"
+        else:
+            fn = "og-default.png"
+        return fn, f"{self.site_url}/assets/images/{fn}"
+
     def generate_schema_markup(self, article: dict, raw_html: str = "") -> str:
         """
         Generates production-grade, Google-validated Triple JSON-LD Schema:
-        1. Article Schema (E-E-A-T credentials, canonical URL, publisher entity)
+        1. Article Schema (E-E-A-T credentials, canonical URL, publisher entity, 1200x630 Google Discover image)
         2. Product / AggregateRating Schema (Rich star ratings in Google SERPs)
         3. FAQPage Schema (People Also Ask expandable rich snippets)
         """
@@ -287,6 +304,8 @@ class SiteBuilder:
             published_at = datetime.utcnow().strftime("%Y-%m-%dT08:00:00Z")
         elif "T" not in published_at:
             published_at = f"{published_at}T08:00:00Z"
+
+        og_fn, og_url = self._get_og_image_info(category)
 
         # Deterministic rating (4.78 - 4.93) and review count (115 - 340) for commercial credibility
         h = sum(ord(c) for c in slug)
@@ -302,6 +321,12 @@ class SiteBuilder:
             },
             "headline": title,
             "description": meta_desc,
+            "image": {
+                "@type": "ImageObject",
+                "url": og_url,
+                "width": 1200,
+                "height": 630
+            },
             "inLanguage": "en-US",
             "mainEntityOfPage": canonical_url,
             "author": {
@@ -316,7 +341,9 @@ class SiteBuilder:
                 "url": f"{self.site_url}/",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": f"{self.site_url}/assets/images/logo.png"
+                    "url": f"{self.site_url}/assets/images/logo.png",
+                    "width": 512,
+                    "height": 512
                 }
             },
             "datePublished": published_at,
@@ -374,7 +401,7 @@ class SiteBuilder:
         return "  <!-- Triple Google Rich Snippets JSON-LD Schema (Article, Review/Stars, FAQPage) -->\n  <script type=\"application/ld+json\">\n" + json_str + "\n  </script>"
 
     def update_all_posts_schema(self):
-        """Refreshes all existing post HTML files with validated Triple JSON-LD Schema in <head>."""
+        """Refreshes all existing post HTML files with validated Triple JSON-LD Schema, Google Discover, and OpenGraph/Twitter cards in <head>."""
         articles = self._get_published_articles()
         art_by_slug = {a.get("slug"): a for a in articles}
 
@@ -392,6 +419,10 @@ class SiteBuilder:
             })
 
             html = pf.read_text(encoding="utf-8")
+            cat = art.get("category", "Banking")
+            og_fn, og_url = self._get_og_image_info(cat)
+            title = art.get("title", slug.replace("-", " ").title())
+            meta_desc = art.get("meta_description", f"Comprehensive financial guide for {slug}.")
 
             # 1. Clean existing JSON-LD from body to prevent duplicate schemas
             cleaned_html = re.sub(r'<script type="application/ld\+json">.*?</script>', '', html, flags=re.DOTALL)
@@ -404,11 +435,45 @@ class SiteBuilder:
                 head_part, body_part = cleaned_html.split("</head>", 1)
                 head_part = re.sub(r'<!-- Triple Google Rich Snippets.*?-->\s*', '', head_part, flags=re.DOTALL)
                 head_part = re.sub(r'<script type="application/ld\+json">.*?</script>\s*', '', head_part, flags=re.DOTALL)
+
+                # Ensure max-image-preview:large
+                if "max-image-preview" not in head_part:
+                    if '<meta name="description"' in head_part:
+                        head_part = re.sub(
+                            r'(<meta name="description"[^>]*>)',
+                            r'\1\n  <meta name="robots" content="index, follow, max-image-preview:large">',
+                            head_part,
+                            count=1
+                        )
+                    else:
+                        head_part = head_part.replace("<head>", "<head>\n  <meta name=\"robots\" content=\"index, follow, max-image-preview:large\">")
+
+                # Remove legacy og:image / twitter:image / site_name to avoid duplicates
+                head_part = re.sub(r'<meta property="og:image[^"]*"[^>]*>\s*', '', head_part)
+                head_part = re.sub(r'<meta property="og:site_name"[^>]*>\s*', '', head_part)
+                head_part = re.sub(r'<meta name="twitter:image[^"]*"[^>]*>\s*', '', head_part)
+                head_part = re.sub(r'<meta name="twitter:site"[^>]*>\s*', '', head_part)
+
+                # Inject modern Social Graph metadata before the CSS link
+                og_block = f"""  <meta property="og:site_name" content="LedgerSpur">
+  <meta property="og:image" content="{og_url}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{title}">
+  <meta name="twitter:site" content="@LedgerSpur">
+  <meta name="twitter:image" content="{og_url}">
+  <meta name="twitter:image:alt" content="{title}">"""
+
+                if '<link rel="stylesheet"' in head_part:
+                    head_part = head_part.replace('<link rel="stylesheet"', f'{og_block}\n  <link rel="stylesheet"', 1)
+                else:
+                    head_part += f"\n{og_block}"
+
                 new_html = head_part.rstrip() + "\n" + schema_tag + "\n</head>" + body_part
                 pf.write_text(new_html, encoding="utf-8")
                 updated_count += 1
 
-        print(f"[+] Successfully injected Triple Schema Markup into {updated_count} post HTML files.")
+        print(f"[+] Successfully injected Google Discover & Triple Schema Markup into {updated_count} post HTML files.")
 
     def build_post_page(self, article: dict) -> Path:
         """Builds a single standalone post HTML file in posts/<slug>.html with full interactive modules."""
@@ -421,6 +486,7 @@ class SiteBuilder:
         date_str = datetime.now().strftime("%B %d, %Y")
         schema_json_ld = self.generate_schema_markup(article, raw_html=article.get('html_content', ''))
         cat = article.get('category', 'Finance')
+        og_fn, og_url = self._get_og_image_info(cat)
 
         html_content = f"""<!DOCTYPE html>
 <html lang="en">
@@ -429,14 +495,23 @@ class SiteBuilder:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{article['title']} - LedgerSpur</title>
   <meta name="description" content="{article['meta_description']}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="{self.site_url}/posts/{slug}.html">
+  <meta property="og:site_name" content="LedgerSpur">
   <meta property="og:title" content="{article['title']} - LedgerSpur">
   <meta property="og:description" content="{article['meta_description']}">
   <meta property="og:url" content="{self.site_url}/posts/{slug}.html">
   <meta property="og:type" content="article">
+  <meta property="og:image" content="{og_url}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{article['title']}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@LedgerSpur">
   <meta name="twitter:title" content="{article['title']}">
   <meta name="twitter:description" content="{article['meta_description']}">
+  <meta name="twitter:image" content="{og_url}">
+  <meta name="twitter:image:alt" content="{article['title']}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -653,10 +728,25 @@ class SiteBuilder:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LedgerSpur - Smart Money. Sharper Moves. (US Personal Finance)</title>
   <meta name="description" content="{Config.DESCRIPTION}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="{self.site_url}/">
+  <meta property="og:site_name" content="LedgerSpur">
+  <meta property="og:title" content="LedgerSpur - Smart Money. Sharper Moves. (US Personal Finance)">
+  <meta property="og:description" content="{Config.DESCRIPTION}">
+  <meta property="og:url" content="{self.site_url}/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{self.site_url}/assets/images/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="LedgerSpur - Smart Money. Sharper Moves.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@LedgerSpur">
+  <meta name="twitter:title" content="LedgerSpur - Smart Money. Sharper Moves.">
+  <meta name="twitter:description" content="{Config.DESCRIPTION}">
+  <meta name="twitter:image" content="{self.site_url}/assets/images/og-default.png">
   <meta name="fo-verify" content="03639c01-3779-4668-adc6-a6e8bd9c37d8" />
   <meta name="impact-site-verification" value="123aa019-bdcb-4276-b5a8-9544da81e985" content="123aa019-bdcb-4276-b5a8-9544da81e985" />
   <meta name='impact-site-verification' value='123aa019-bdcb-4276-b5a8-9544da81e985'>
-  <link rel="canonical" href="{self.site_url}/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -725,6 +815,19 @@ class SiteBuilder:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{page_title}</title>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="{self.site_url}/pages/{dest_name}">
+  <meta property="og:site_name" content="LedgerSpur">
+  <meta property="og:title" content="{page_title}">
+  <meta property="og:url" content="{self.site_url}/pages/{dest_name}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{self.site_url}/assets/images/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@LedgerSpur">
+  <meta name="twitter:title" content="{page_title}">
+  <meta name="twitter:image" content="{self.site_url}/assets/images/og-default.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -759,6 +862,7 @@ class SiteBuilder:
 
         for cat in categories:
             slug = cat.lower().replace(" ", "-")
+            og_fn, og_url = self._get_og_image_info(cat)
             cat_articles = [a for a in articles if a.get("category", "").lower() == cat.lower()]
 
             cards_html = ""
@@ -785,6 +889,22 @@ class SiteBuilder:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{cat} Guides & Reviews - LedgerSpur</title>
+  <meta name="description" content="Expert-curated {cat} comparisons, benchmarks, and actionable financial strategies for Americans.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="{self.site_url}/categories/{slug}.html">
+  <meta property="og:site_name" content="LedgerSpur">
+  <meta property="og:title" content="{cat} Guides & Reviews - LedgerSpur">
+  <meta property="og:description" content="Expert-curated {cat} comparisons, benchmarks, and actionable financial strategies for Americans.">
+  <meta property="og:url" content="{self.site_url}/categories/{slug}.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{og_url}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@LedgerSpur">
+  <meta name="twitter:title" content="{cat} Guides & Reviews - LedgerSpur">
+  <meta name="twitter:description" content="Expert-curated {cat} comparisons, benchmarks, and actionable financial strategies for Americans.">
+  <meta name="twitter:image" content="{og_url}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
