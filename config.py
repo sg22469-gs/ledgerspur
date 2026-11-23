@@ -28,3 +28,12 @@ class Config:
     TOPICS_FILE = BASE_DIR / "topics.json"
     HISTORY_FILE = BASE_DIR / "history.json"
     BUFFER_FILE = BASE_DIR / "buffer_pool.json"
+    SOCIAL_OUTBOX_FILE = BASE_DIR / "social_outbox.json"
+    FEED_FILE = BASE_DIR / "feed.xml"
+    SOCIAL_FEED_FILE = BASE_DIR / "social_feed.json"
+
+    # 4. Multi-Channel Social & Webhook Distribution
+    SOCIAL_WEBHOOK_URL = os.getenv("SOCIAL_WEBHOOK_URL", "")
+    DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "")
+    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+    TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")

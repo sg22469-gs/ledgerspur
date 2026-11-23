@@ -72,6 +72,10 @@ jobs:
           SITE_URL: https://ledgerspur.com
           EVENT_CRON: ${{ github.event.schedule }}
           INPUT_SEGMENT: ${{ github.event.inputs.segment }}
+          SOCIAL_WEBHOOK_URL: ${{ secrets.SOCIAL_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           if [ "$INPUT_SEGMENT" = "trending" ] || [ "$EVENT_CRON" = "0 18 * * 1,3,5" ]; then
             echo "[*] Executing Golden-Time Trending Post Segment..."

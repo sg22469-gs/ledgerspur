@@ -747,6 +747,8 @@ class SiteBuilder:
   <meta name="fo-verify" content="03639c01-3779-4668-adc6-a6e8bd9c37d8" />
   <meta name="impact-site-verification" value="123aa019-bdcb-4276-b5a8-9544da81e985" content="123aa019-bdcb-4276-b5a8-9544da81e985" />
   <meta name='impact-site-verification' value='123aa019-bdcb-4276-b5a8-9544da81e985'>
+  <link rel="alternate" type="application/rss+xml" title="LedgerSpur Financial RSS Feed" href="{self.site_url}/feed.xml">
+  <link rel="alternate" type="application/feed+json" title="LedgerSpur Social JSON Feed" href="{self.site_url}/social_feed.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -958,3 +960,11 @@ class SiteBuilder:
         # CNAME File for GitHub Pages
         with open(self.base_dir / "CNAME", "w", encoding="utf-8") as f:
             f.write("ledgerspur.com\n")
+
+        # Multi-Channel Social Feeds (RSS 2.0 & JSON Feed 1.1)
+        try:
+            from modules.social_publisher import SocialPublisher
+            social_pub = SocialPublisher()
+            social_pub.generate_feeds(articles)
+        except Exception as e:
+            print(f"[!] Warning: Could not generate social feeds: {e}")

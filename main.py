@@ -83,6 +83,16 @@ def run_single_pipeline(topic_data: dict = None, is_trending: bool = False):
     site_builder.build_sitemap_and_feed()
     print("[+] Site successfully updated!")
 
+    # 5. Generate & Queue Platform-Specific Social Media Trailers
+    print("[+] Generating platform-specific social media trailers (X, LinkedIn, Reddit, Pinterest)...")
+    try:
+        from modules.social_publisher import SocialPublisher
+        social_pub = SocialPublisher()
+        social_pub.queue_trailer(article)
+        social_pub.dispatch_trailers()
+    except Exception as e:
+        print(f"[!] Warning: Social publisher step encountered non-blocking note: {e}")
+
 def audit_queue():
     """Runs 48-hour AI mock evaluation on all pending topics."""
     guard = TopicGuard()
@@ -124,8 +134,52 @@ def main():
     parser.add_argument("--list", action="store_true", help="List all pending topics")
     parser.add_argument("--refill-buffer", action="store_true", help="Check and refill pre-generated emergency buffer post pool")
     parser.add_argument("--buffer-status", action="store_true", help="Display current status of emergency buffer pool")
+    parser.add_argument("--social-status", action="store_true", help="Display status of queued and dispatched social media trailers")
+    parser.add_argument("--dispatch-social", action="store_true", help="Trigger dispatch of queued social trailers via webhooks")
+    parser.add_argument("--generate-social-outbox", action="store_true", help="Generate social media trailers for all published articles")
 
     args = parser.parse_args()
+
+    if args.social_status:
+        from modules.social_publisher import SocialPublisher
+        pub = SocialPublisher()
+        outbox = pub._read_outbox()
+        queued = [x for x in outbox if x.get("status") == "queued"]
+        dispatched = [x for x in outbox if x.get("status") == "dispatched"]
+        print("\n=======================================================")
+        print("   [TALON] LedgerSpur Autonomous Social Media Outbox   ")
+        print("=======================================================")
+        print(f"Total Trailers in Outbox: {len(outbox)}")
+        print(f"Queued (Pending Broadcast): {len(queued)}")
+        print(f"Dispatched: {len(dispatched)}\n")
+        if queued:
+            print("Next 3 Pending Social Trailers:")
+            for i, q in enumerate(queued[:3], 1):
+                print(f"  {i}. [{q['category']}] {q['title']}")
+                print(f"     URL: {q['url']}")
+                print(f"     X/Twitter Hook: {q['trailers']['twitter']['text'].splitlines()[0]}")
+        print("=======================================================\n")
+        return
+
+    if args.dispatch_social:
+        from modules.social_publisher import SocialPublisher
+        pub = SocialPublisher()
+        pub.dispatch_trailers()
+        return
+
+    if args.generate_social_outbox:
+        from modules.social_publisher import SocialPublisher
+        from modules.site_builder import SiteBuilder
+        pub = SocialPublisher()
+        builder = SiteBuilder()
+        articles = builder._get_published_articles()
+        print(f"[*] Generating social trailers for {len(articles)} published articles...")
+        count = 0
+        for a in articles:
+            pub.queue_trailer(a)
+            count += 1
+        print(f"[+] Outbox populated with {count} social trailers in social_outbox.json!")
+        return
 
     if args.mock_audit:
         audit_queue()
