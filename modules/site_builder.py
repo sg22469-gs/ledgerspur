@@ -1,5 +1,6 @@
 import re
 import json
+import math
 from datetime import datetime
 from pathlib import Path
 from config import Config
@@ -685,26 +686,26 @@ class SiteBuilder:
 
         return file_path
 
-    def build_index_page(self):
-        """Builds index.html with Hero section and cards for all published articles."""
-        articles = self._get_published_articles()
-        header = self._get_header_html(relative_root="")
-        sidebar = self._get_sidebar_html(relative_root="")
-        footer = self._get_footer_html(relative_root="")
+    POSTS_PER_PAGE = 12
 
-        posts_cards_html = ""
-        for art in articles:
+    def _render_post_cards_html(self, article_slice: list, relative_posts_prefix: str = "posts/") -> str:
+        """Renders standard HTML post cards for a slice of articles."""
+        if not article_slice:
+            return "<p>No articles found.</p>"
+
+        cards_html = ""
+        for art in article_slice:
             slug = art.get("slug", "")
             title = art.get("topic", art.get("title", ""))
             category = art.get("category", "Banking")
             date_str = art.get("published_at", "")[:10] or datetime.now().strftime("%Y-%m-%d")
             snippet = art.get("meta_description", "In-depth financial comparison and rates analysis for US consumers.")
 
-            posts_cards_html += f"""
+            cards_html += f"""
         <article class="post-card">
           <span class="post-category">{category}</span>
           <h2 class="post-title">
-            <a href="posts/{slug}.html">{title}</a>
+            <a href="{relative_posts_prefix}{slug}.html">{title}</a>
           </h2>
           <div class="post-meta">
             <span>By LedgerSpur Editorial</span>
@@ -714,26 +715,125 @@ class SiteBuilder:
             <span>5 min read</span>
           </div>
           <p class="post-snippet">{snippet}</p>
-          <a class="read-more-link" href="posts/{slug}.html">Read Full Analysis &rarr;</a>
+          <a class="read-more-link" href="{relative_posts_prefix}{slug}.html">Read Full Analysis &rarr;</a>
         </article>
 """
+        return cards_html
 
-        if not posts_cards_html:
-            posts_cards_html = "<p>No articles published yet. Run auto-generator to add seed content.</p>"
+    def _render_pagination_nav(self, current_page: int, total_pages: int, page_url_fn) -> str:
+        """Renders an accessible, SEO-compliant pagination navigation component."""
+        if total_pages <= 1:
+            return ""
 
-        index_html = f"""<!DOCTYPE html>
+        nav_html = '<nav class="ls-pagination" aria-label="Page navigation">\n  <ul class="pagination-list">\n'
+
+        # Previous button
+        if current_page > 1:
+            prev_url = page_url_fn(current_page - 1)
+            nav_html += f'    <li class="page-item"><a class="page-link prev-link" href="{prev_url}" rel="prev">&larr; Previous</a></li>\n'
+        else:
+            nav_html += '    <li class="page-item disabled"><span class="page-link prev-link">&larr; Previous</span></li>\n'
+
+        # Page numbers
+        for p in range(1, total_pages + 1):
+            if p == current_page:
+                nav_html += f'    <li class="page-item active" aria-current="page"><span class="page-link">{p}</span></li>\n'
+            else:
+                p_url = page_url_fn(p)
+                nav_html += f'    <li class="page-item"><a class="page-link" href="{p_url}">{p}</a></li>\n'
+
+        # Next button
+        if current_page < total_pages:
+            next_url = page_url_fn(current_page + 1)
+            nav_html += f'    <li class="page-item"><a class="page-link next-link" href="{next_url}" rel="next">Next &rarr;</a></li>\n'
+        else:
+            nav_html += '    <li class="page-item disabled"><span class="page-link next-link">Next &rarr;</span></li>\n'
+
+        nav_html += '  </ul>\n</nav>'
+        return nav_html
+
+    def build_index_page(self):
+        """Builds index.html and paginated pages (page-2.html, page-3.html...) with 12 articles per page."""
+        articles = self._get_published_articles()
+        header = self._get_header_html(relative_root="")
+        sidebar = self._get_sidebar_html(relative_root="")
+        footer = self._get_footer_html(relative_root="")
+
+        total_posts = len(articles)
+        total_pages = max(1, math.ceil(total_posts / self.POSTS_PER_PAGE))
+
+        # Clean up existing page-*.html files in base_dir
+        for p_file in self.base_dir.glob("page-*.html"):
+            try:
+                p_file.unlink()
+            except Exception:
+                pass
+
+        for page_num in range(1, total_pages + 1):
+            start_idx = (page_num - 1) * self.POSTS_PER_PAGE
+            end_idx = start_idx + self.POSTS_PER_PAGE
+            page_articles = articles[start_idx:end_idx]
+
+            cards_html = self._render_post_cards_html(page_articles, relative_posts_prefix="posts/")
+
+            def home_url(p):
+                return "index.html" if p == 1 else f"page-{p}.html"
+
+            pagination_html = self._render_pagination_nav(page_num, total_pages, home_url)
+
+            is_first_page = (page_num == 1)
+            page_title = "LedgerSpur - Smart Money. Sharper Moves. (US Personal Finance)" if is_first_page else f"LedgerSpur - Smart Money. Sharper Moves. (Page {page_num})"
+            canonical_url = f"{self.site_url}/" if is_first_page else f"{self.site_url}/page-{page_num}.html"
+
+            rel_tags = ""
+            if page_num > 1:
+                prev_link = f"{self.site_url}/" if page_num == 2 else f"{self.site_url}/page-{page_num - 1}.html"
+                rel_tags += f'  <link rel="prev" href="{prev_link}">\n'
+            if page_num < total_pages:
+                rel_tags += f'  <link rel="next" href="{self.site_url}/page-{page_num + 1}.html">\n'
+
+            if is_first_page:
+                hero_html = f"""
+  <!-- Hero Section -->
+  <section class="hero-banner">
+    <div class="hero-container">
+      <span class="hero-badge">Data-Driven Personal Finance</span>
+      <h1>Master Your Wealth.<br>Spur Your Growth.</h1>
+      <p>Unbiased comparisons of high-yield savings accounts, top cash back credit cards, and wealth-building strategies for Americans.</p>
+      <div class="hero-tags">
+        <a class="hero-tag" href="categories/banking.html">💰 4.5%+ HYSA Accounts</a>
+        <a class="hero-tag" href="categories/credit-cards.html">💳 0% APR Cards</a>
+        <a class="hero-tag" href="categories/investing.html">📈 Roth IRA vs 401(k)</a>
+        <a class="hero-tag" href="categories/loans.html">⚡ Debt Payoff Guides</a>
+      </div>
+    </div>
+  </section>
+"""
+                page_heading = "Latest Financial Guides &amp; Reviews"
+            else:
+                hero_html = f"""
+  <section class="hero-banner" style="padding: 30px 20px;">
+    <div class="hero-container">
+      <h1 style="font-size: 28px;">Financial Guides Archive &mdash; Page {page_num}</h1>
+      <p>Browsing Page {page_num} of our latest CFP-vetted research, rates analysis, and personal finance strategies.</p>
+    </div>
+  </section>
+"""
+                page_heading = f"Financial Guides &amp; Reviews (Page {page_num} of {total_pages})"
+
+            page_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LedgerSpur - Smart Money. Sharper Moves. (US Personal Finance)</title>
+  <title>{page_title}</title>
   <meta name="description" content="{Config.DESCRIPTION}">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="{self.site_url}/">
-  <meta property="og:site_name" content="LedgerSpur">
-  <meta property="og:title" content="LedgerSpur - Smart Money. Sharper Moves. (US Personal Finance)">
+  <link rel="canonical" href="{canonical_url}">
+{rel_tags}  <meta property="og:site_name" content="LedgerSpur">
+  <meta property="og:title" content="{page_title}">
   <meta property="og:description" content="{Config.DESCRIPTION}">
-  <meta property="og:url" content="{self.site_url}/">
+  <meta property="og:url" content="{canonical_url}">
   <meta property="og:type" content="website">
   <meta property="og:image" content="{self.site_url}/assets/images/og-default.png">
   <meta property="og:image:width" content="1200">
@@ -741,7 +841,7 @@ class SiteBuilder:
   <meta property="og:image:alt" content="LedgerSpur - Smart Money. Sharper Moves.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@LedgerSpur">
-  <meta name="twitter:title" content="LedgerSpur - Smart Money. Sharper Moves.">
+  <meta name="twitter:title" content="{page_title}">
   <meta name="twitter:description" content="{Config.DESCRIPTION}">
   <meta name="twitter:image" content="{self.site_url}/assets/images/og-default.png">
   <meta name="fo-verify" content="03639c01-3779-4668-adc6-a6e8bd9c37d8" />
@@ -757,28 +857,16 @@ class SiteBuilder:
 <body>
   {header}
 
-  <!-- Hero Section -->
-  <section class="hero-banner">
-    <div class="hero-container">
-      <span class="hero-badge">Data-Driven Personal Finance</span>
-      <h1>Master Your Wealth.<br>Spur Your Growth.</h1>
-      <p>Unbiased comparisons of high-yield savings accounts, top cash back credit cards, and wealth-building strategies for Americans.</p>
-      <div class="hero-tags">
-        <a class="hero-tag" href="categories/banking.html">💰 4.5%+ HYSA Accounts</a>
-        <a class="hero-tag" href="categories/credit-cards.html">💳 0% APR Cards</a>
-        <a class="hero-tag" href="categories/investing.html">📈 Roth IRA vs 401(k)</a>
-        <a class="hero-tag" href="categories/loans.html">⚡ Debt Payoff Guides</a>
-      </div>
-    </div>
-  </section>
+{hero_html}
 
   <!-- Main Content Layout -->
   <div class="main-wrapper" id="featured">
     <main class="content-area">
-      <h2 style="margin-bottom: 24px; font-size: 26px;">Latest Financial Guides &amp; Reviews</h2>
+      <h2 style="margin-bottom: 24px; font-size: 26px;">{page_heading}</h2>
       <div class="posts-grid">
-        {posts_cards_html}
+        {cards_html}
       </div>
+      {pagination_html}
     </main>
 
     {sidebar}
@@ -788,8 +876,9 @@ class SiteBuilder:
 </body>
 </html>
 """
-        with open(self.base_dir / "index.html", "w", encoding="utf-8") as f:
-            f.write(index_html)
+            out_file = self.base_dir / "index.html" if is_first_page else self.base_dir / f"page-{page_num}.html"
+            with open(out_file, "w", encoding="utf-8") as f:
+                f.write(page_html)
 
     def build_legal_pages(self):
         """Converts legal/*.html into styled pages/<name>.html."""
@@ -855,56 +944,75 @@ class SiteBuilder:
                     f.write(page_html)
 
     def build_category_pages(self):
-        """Generates dedicated archive pages for each category."""
+        """Generates dedicated archive pages for each category with static pagination."""
         categories = ["Credit Cards", "Banking", "Loans", "Investing", "Reviews"]
         articles = self._get_published_articles()
         header = self._get_header_html(relative_root="../")
         sidebar = self._get_sidebar_html(relative_root="../")
         footer = self._get_footer_html(relative_root="../")
 
+        # Clean up existing *-page-*.html files in categories dir
+        for p_file in self.categories_dir.glob("*-page-*.html"):
+            try:
+                p_file.unlink()
+            except Exception:
+                pass
+
         for cat in categories:
             slug = cat.lower().replace(" ", "-")
             og_fn, og_url = self._get_og_image_info(cat)
             cat_articles = [a for a in articles if a.get("category", "").lower() == cat.lower()]
 
-            cards_html = ""
-            for art in cat_articles:
-                art_slug = art.get("slug", "")
-                title = art.get("topic", art.get("title", ""))
-                date_str = art.get("published_at", "")[:10]
-                snippet = art.get("meta_description", "")
-                cards_html += f"""
-        <article class="post-card">
-          <span class="post-category">{cat}</span>
-          <h2 class="post-title"><a href="../posts/{art_slug}.html">{title}</a></h2>
-          <div class="post-meta"><span>{date_str}</span> • <span>5 min read</span></div>
-          <p class="post-snippet">{snippet}</p>
-          <a class="read-more-link" href="../posts/{art_slug}.html">Read Guide &rarr;</a>
-        </article>
-"""
-            if not cards_html:
-                cards_html = f"<p>Articles in {cat} will be published shortly.</p>"
+            total_cat_posts = len(cat_articles)
+            total_pages = max(1, math.ceil(total_cat_posts / self.POSTS_PER_PAGE))
 
-            cat_html = f"""<!DOCTYPE html>
+            for page_num in range(1, total_pages + 1):
+                start_idx = (page_num - 1) * self.POSTS_PER_PAGE
+                end_idx = start_idx + self.POSTS_PER_PAGE
+                page_articles = cat_articles[start_idx:end_idx]
+
+                is_first_page = (page_num == 1)
+                canonical_url = f"{self.site_url}/categories/{slug}.html" if is_first_page else f"{self.site_url}/categories/{slug}-page-{page_num}.html"
+
+                rel_tags = ""
+                if page_num > 1:
+                    prev_href = f"{slug}.html" if page_num == 2 else f"{slug}-page-{page_num - 1}.html"
+                    rel_tags += f'  <link rel="prev" href="{prev_href}">\n'
+                if page_num < total_pages:
+                    next_href = f"{slug}-page-{page_num + 1}.html"
+                    rel_tags += f'  <link rel="next" href="{next_href}">\n'
+
+                def make_cat_page_url(cat_slug):
+                    return lambda p: f"{cat_slug}.html" if p == 1 else f"{cat_slug}-page-{p}.html"
+
+                pagination_html = self._render_pagination_nav(page_num, total_pages, make_cat_page_url(slug))
+                cards_html = self._render_post_cards_html(page_articles, relative_posts_prefix="../posts/")
+                if not cards_html:
+                    cards_html = f"<p>Articles in {cat} will be published shortly.</p>"
+
+                page_title = f"{cat} Guides & Reviews - LedgerSpur" if is_first_page else f"{cat} Guides & Reviews (Page {page_num} of {total_pages}) - LedgerSpur"
+                page_heading = f"{cat} Resources" if is_first_page else f"{cat} Resources (Page {page_num} of {total_pages})"
+
+                cat_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{cat} Guides & Reviews - LedgerSpur</title>
+  <title>{page_title}</title>
   <meta name="description" content="Expert-curated {cat} comparisons, benchmarks, and actionable financial strategies for Americans.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="{self.site_url}/categories/{slug}.html">
-  <meta property="og:site_name" content="LedgerSpur">
-  <meta property="og:title" content="{cat} Guides & Reviews - LedgerSpur">
+  <link rel="canonical" href="{canonical_url}">
+{rel_tags}  <meta property="og:site_name" content="LedgerSpur">
+  <meta property="og:title" content="{page_title}">
   <meta property="og:description" content="Expert-curated {cat} comparisons, benchmarks, and actionable financial strategies for Americans.">
-  <meta property="og:url" content="{self.site_url}/categories/{slug}.html">
+  <meta property="og:url" content="{canonical_url}">
   <meta property="og:type" content="website">
   <meta property="og:image" content="{og_url}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@LedgerSpur">
-  <meta name="twitter:title" content="{cat} Guides & Reviews - LedgerSpur">
+  <meta name="twitter:title" content="{page_title}">
   <meta name="twitter:description" content="Expert-curated {cat} comparisons, benchmarks, and actionable financial strategies for Americans.">
   <meta name="twitter:image" content="{og_url}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -916,8 +1024,9 @@ class SiteBuilder:
   {header}
   <div class="main-wrapper">
     <main class="content-area">
-      <h1 style="font-size: 32px; margin-bottom: 24px;">{cat} Resources</h1>
+      <h1 style="font-size: 32px; margin-bottom: 24px;">{page_heading}</h1>
       <div class="posts-grid">{cards_html}</div>
+      {pagination_html}
     </main>
     {sidebar}
   </div>
@@ -925,8 +1034,9 @@ class SiteBuilder:
 </body>
 </html>
 """
-            with open(self.categories_dir / f"{slug}.html", "w", encoding="utf-8") as f:
-                f.write(cat_html)
+                dest_file = self.categories_dir / f"{slug}.html" if is_first_page else self.categories_dir / f"{slug}-page-{page_num}.html"
+                with open(dest_file, "w", encoding="utf-8") as f:
+                    f.write(cat_html)
 
     def build_sitemap_and_feed(self):
         """Generates sitemap.xml and feed.xml for Google indexing and RSS."""
@@ -941,6 +1051,19 @@ class SiteBuilder:
             f"<url><loc>{self.site_url}/pages/terms.html</loc><priority>0.5</priority></url>",
             f"<url><loc>{self.site_url}/pages/ftc-disclosure.html</loc><priority>0.5</priority></url>",
         ]
+
+        # Add paginated homepage pages (page-2.html, page-3.html...)
+        for p_file in sorted(self.base_dir.glob("page-*.html")):
+            sitemap_entries.append(
+                f"<url><loc>{self.site_url}/{p_file.name}</loc><lastmod>{now_iso}</lastmod><priority>0.7</priority></url>"
+            )
+
+        # Add categories and their paginated pages
+        for cat_file in sorted(self.categories_dir.glob("*.html")):
+            priority = "0.7" if "-page-" not in cat_file.name else "0.6"
+            sitemap_entries.append(
+                f"<url><loc>{self.site_url}/categories/{cat_file.name}</loc><lastmod>{now_iso}</lastmod><priority>{priority}</priority></url>"
+            )
 
         for art in articles:
             slug = art.get("slug", "")
