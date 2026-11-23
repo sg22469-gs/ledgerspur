@@ -1473,722 +1473,752 @@
   },
   {
     "id": 57,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "High-Yield Money Market Accounts vs CDs: Which Offers Superior Liquidity in 2026?",
+    "category": "Banking",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Banking",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "money market account vs cd liquidity",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Vanguard Cash Plus, Fidelity Bloom, Marcus",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 91,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-08T13:46:13.315155"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-08T13:46:13.315155",
-    "eligible_at": "2026-11-10T13:46:13.315155"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-26T00:51:25.094065"
   },
   {
     "id": 58,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Best Checking Accounts with Sign-Up Bonuses: Claim  to  Cash Back in 2026",
+    "category": "Banking",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Banking",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "best checking account bonuses 2026",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Chase Total Checking, Wells Fargo, SoFi Checking",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 92,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-08T23:31:37.348666"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-08T23:31:37.348666",
-    "eligible_at": "2026-11-10T23:31:37.348666"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-26T12:51:25.094065"
   },
   {
     "id": 59,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Bank Account Bonuses and Taxes: How to Report 1099-INT on Checking & Savings Promos",
+    "category": "Banking",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Banking",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "are bank bonuses taxable 1099 int",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "TurboTax, H&R Block, Marcus",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 93,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-09T22:56:13.370609"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-09T22:56:13.370609",
-    "eligible_at": "2026-11-11T22:56:13.370609"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-27T00:51:25.094065"
   },
   {
     "id": 60,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Best Business Checking Accounts for LLCs: Zero Monthly Fees and High APY Yields",
+    "category": "Banking",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Banking",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "best business checking accounts llc zero fees",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Found, Novo, Bluevine, Chase Business",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 94,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-10T04:32:59.872214"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-10T04:32:59.872214",
-    "eligible_at": "2026-11-12T04:32:59.872214"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-27T12:51:25.094065"
   },
   {
     "id": 61,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "How to Earn 5%+ on Cash Without Locking Funds in a Long-Term Certificate of Deposit",
+    "category": "Banking",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Banking",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "earn 5 percent interest without cd lock in",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "SoFi, UFB Direct, Wealthfront Cash",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 95,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-10T20:22:29.738159"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-10T20:22:29.738159",
-    "eligible_at": "2026-11-12T20:22:29.738159"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-28T00:51:25.094065"
   },
   {
     "id": 62,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "TreasuryDirect vs Brokerage: The Easiest Way to Buy 4-Week US Treasury Bills in 2026",
+    "category": "Banking",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Banking",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "how to buy treasury bills treasurydirect vs fidelity",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "TreasuryDirect, Fidelity, Schwab",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 96,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-11T02:40:12.075595"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-11T02:40:12.075595",
-    "eligible_at": "2026-11-13T02:40:12.075595"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-28T12:51:25.094065"
   },
   {
     "id": 63,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "topic": "Chase Sapphire Preferred vs Capital One Venture Rewards: The  Annual Fee Showdown",
     "category": "Credit Cards",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Credit Cards",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "chase sapphire preferred vs capital one venture",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Chase Sapphire Preferred, Capital One Venture",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 97,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-11T20:05:15.186742"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-11T20:05:15.186742",
-    "eligible_at": "2026-11-13T20:05:15.186742"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-29T00:51:25.094065"
   },
   {
     "id": 64,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "topic": "Best Credit Cards for 750+ FICO Scores: Elite Travel Perks and Premium Cash Back",
     "category": "Credit Cards",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Credit Cards",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "best credit cards for 750 credit score",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Amex Gold, Capital One Venture X, Chase Sapphire",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 91,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-12T03:42:21.040356"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-12T03:42:21.040356",
-    "eligible_at": "2026-11-14T03:42:21.040356"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-29T12:51:25.094065"
   },
   {
     "id": 65,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "topic": "How Many Credit Cards Should You Have? The Optimal Number for Maximum FICO Scoring",
     "category": "Credit Cards",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Credit Cards",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "how many credit cards should i have to build credit",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Experian, Discover, Chase Freedom",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 92,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-12T20:43:38.037923"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-12T20:43:38.037923",
-    "eligible_at": "2026-11-14T20:43:38.037923"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-30T00:51:25.094065"
   },
   {
     "id": 66,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "topic": "Best 2% Flat Cash Back Credit Cards: Maximize Every Purchase with Zero Category Tracking",
     "category": "Credit Cards",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Credit Cards",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "best 2 percent flat cash back credit cards",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Citi Double Cash, Wells Fargo Active Cash, Fidelity Visa",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 93,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-13T03:25:29.968573"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-13T03:25:29.968573",
-    "eligible_at": "2026-11-15T03:25:29.968573"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-30T12:51:25.094065"
   },
   {
     "id": 67,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "topic": "Authorized User Credit Card Strategy: How to Boost a Family Member's Score by 50+ Points",
     "category": "Credit Cards",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Credit Cards",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "authorized user credit score boost strategy",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Discover it, Capital One Quicksilver",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 94,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-13T20:25:43.908897"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-13T20:25:43.908897",
-    "eligible_at": "2026-11-15T20:25:43.908897"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-01T00:51:25.094065"
   },
   {
     "id": 68,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
+    "topic": "Credit Card Retention Offers: How to Get Your Annual Fee Waived or Offset with One Phone Call",
     "category": "Credit Cards",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Credit Cards",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "how to get credit card retention offer annual fee",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Amex Platinum, Chase Sapphire Reserve",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 95,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-14T02:58:20.031565"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-14T02:58:20.031565",
-    "eligible_at": "2026-11-16T02:58:20.031565"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-01T12:51:25.094065"
   },
   {
     "id": 69,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "How to Consolidate ,000 in Credit Card Debt with a Single Low-APR Personal Loan",
+    "category": "Loans",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Loans",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "consolidate 25k credit card debt low apr loan",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "SoFi Personal Loans, Upgrade, Upstart",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 96,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-14T18:42:07.118181"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-14T18:42:07.118181",
-    "eligible_at": "2026-11-16T18:42:07.118181"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-02T00:51:25.094065"
   },
   {
     "id": 70,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Home Equity Loan vs HELOC: How to Tap Equity Without Sacrificing a 3% Mortgage Rate",
+    "category": "Loans",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Loans",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "heloc vs home equity loan keep low mortgage rate",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Figure, LendingTree, Rocket Mortgage",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 97,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-15T02:29:15.837260"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-15T02:29:15.837260",
-    "eligible_at": "2026-11-17T02:29:15.837260"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-02T12:51:25.094065"
   },
   {
     "id": 71,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "VA Loan vs Conventional Mortgage: Zero Down Payment Benefits for Military Families",
+    "category": "Loans",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Loans",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "va loan vs conventional mortgage zero down",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Veterans United, Navy Federal, Rocket Mortgage",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 91,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-15T19:18:19.467097"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-15T19:18:19.467097",
-    "eligible_at": "2026-11-17T19:18:19.467097"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-03T00:51:25.094065"
   },
   {
     "id": 72,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "How to Lower Your Private Mortgage Insurance (PMI) and Cancel It Early: 80% LTV Guide",
+    "category": "Loans",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Loans",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "how to cancel pmi private mortgage insurance early",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Rocket Mortgage, Better Mortgage, LendingTree",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 92,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-16T02:39:13.469445"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-16T02:39:13.469445",
-    "eligible_at": "2026-11-18T02:39:13.469445"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-03T12:51:25.094065"
   },
   {
     "id": 73,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Personal Loan vs 401(k) Loan: Which Debt Payoff Option Carries Less Financial Risk?",
+    "category": "Loans",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Loans",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "personal loan vs 401k loan to pay off debt",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "SoFi, Upgrade, Empower 401k",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 93,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-16T22:49:16.930336"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-16T22:49:16.930336",
-    "eligible_at": "2026-11-18T22:49:16.930336"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-04T00:51:25.094065"
   },
   {
     "id": 74,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Best Small Business Loans for Startups: SBA 7(a) vs Revenue-Based Working Capital",
+    "category": "Loans",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Loans",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "best small business loans for startups sba 7a",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Lendio, Fundbox, Bluevine",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 94,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-17T05:00:05.049670"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-17T05:00:05.049670",
-    "eligible_at": "2026-11-19T05:00:05.049670"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-04T12:51:25.094065"
   },
   {
     "id": 75,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Roth 401(k) vs Traditional 401(k): Which Account Makes You Wealthier in Retirement?",
+    "category": "Investing",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Investing",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "roth 401k vs traditional 401k retirement wealth",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Vanguard, Fidelity, Empower",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 95,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-17T21:45:45.694742"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-17T21:45:45.694742",
-    "eligible_at": "2026-11-19T21:45:45.694742"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-05T00:51:25.094065"
   },
   {
     "id": 76,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "How to Build a Three-Fund Portfolio: The Lazy Investor Guide to Market-Beating Wealth",
+    "category": "Investing",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Investing",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "three fund portfolio vanguard fidelity bogleheads",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Vanguard VTI, BND, VXUS, Fidelity",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 96,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-18T04:06:29.889513"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-18T04:06:29.889513",
-    "eligible_at": "2026-11-20T04:06:29.889513"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-05T12:51:25.094065"
   },
   {
     "id": 77,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "How to Buy Physical Gold & Silver Inside a Self-Directed IRA: IRS Rules and Custodians",
+    "category": "Investing",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Investing",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "buy gold in self directed ira irs approved custodians",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Augusta Precious Metals, Birch Gold Group",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 97,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-18T21:13:56.060422"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-18T21:13:56.060422",
-    "eligible_at": "2026-11-20T21:13:56.060422"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-06T00:51:25.094065"
   },
   {
     "id": 78,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Mega Backdoor Roth IRA Explained: How High Earners Save Up to ,000 Completely Tax-Free",
+    "category": "Investing",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Investing",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "mega backdoor roth ira contribution rules high earners",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Fidelity, Charles Schwab, Vanguard",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 91,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-19T04:03:56.998683"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-19T04:03:56.998683",
-    "eligible_at": "2026-11-21T04:03:56.998683"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-06T12:51:25.094065"
   },
   {
     "id": 79,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Target Date Funds vs S&P 500 Index Funds: Which Generates Superior 30-Year Returns?",
+    "category": "Investing",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Investing",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "target date fund vs sp 500 index fund returns",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Vanguard Target Retirement, VOO, SPY",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 92,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-19T21:17:04.315790"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-19T21:17:04.315790",
-    "eligible_at": "2026-11-21T21:17:04.315790"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-07T00:51:25.094065"
   },
   {
     "id": 80,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Municipal Bonds for High Tax Brackets: Triple Tax-Free Yields for Passive Income Savers",
+    "category": "Investing",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Investing",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "municipal bonds tax free yield passive income",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Vanguard VTEB, iShares MUB, Schwab",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 93,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-20T03:55:08.800789"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-20T03:55:08.800789",
-    "eligible_at": "2026-11-22T03:55:08.800789"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-07T12:51:25.094065"
   },
   {
     "id": 81,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "The 50/30/20 Budgeting Rule: Complete Spreadsheet Template for Young Professionals in 2026",
+    "category": "Reviews",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Reviews",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "50 30 20 budget template young professionals 2026",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "YNAB, Monarch Money, Copilot Money",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 94,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-20T20:59:00.471783"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-20T20:59:00.471783",
-    "eligible_at": "2026-11-22T20:59:00.471783"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-08T00:51:25.094065"
   },
   {
     "id": 82,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Empower (Personal Capital) vs Quicken Simplifi: Best Net Worth & Fee Tracker Review",
+    "category": "Reviews",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Reviews",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "empower personal capital vs quicken simplifi review",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Empower Personal Dashboard, Quicken Simplifi",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 95,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-21T03:52:14.256791"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-21T03:52:14.256791",
-    "eligible_at": "2026-11-23T03:52:14.256791"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-08T12:51:25.094065"
   },
   {
     "id": 83,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Best High-Yield Savings Accounts for Freelancers & 1099 Contractors: Quarterly Tax Reserves",
+    "category": "Reviews",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Reviews",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "best savings account for 1099 freelancers taxes",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Found Banking, Lili, Novo, SoFi",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 96,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-21T20:01:14.502102"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-21T20:01:14.502102",
-    "eligible_at": "2026-11-23T20:01:14.502102"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-09T00:51:25.094065"
   },
   {
     "id": 84,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Betterment Cash Reserve vs Wealthfront Cash Account: The Battle of Fintech HYSA Accounts",
+    "category": "Reviews",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Reviews",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "betterment cash reserve vs wealthfront cash account",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Betterment, Wealthfront",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 97,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-22T02:56:03.721749"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-22T02:56:03.721749",
-    "eligible_at": "2026-11-24T02:56:03.721749"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-09T12:51:25.094065"
   },
   {
     "id": 85,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Monarch Money vs PocketGuard: Which Personal Finance App Prevents Overspending?",
+    "category": "Reviews",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Reviews",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "monarch money vs pocketguard overspending app review",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Monarch Money, PocketGuard, YNAB",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 91,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-22T20:14:52.051955"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-22T20:14:52.051955",
-    "eligible_at": "2026-11-24T20:14:52.051955"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-10T00:51:25.094065"
   },
   {
     "id": 86,
-    "topic": "Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers (2026 Guide)",
-    "category": "Credit Cards",
+    "topic": "Top 5 Credit Score Monitoring Apps That Won't Sell Your Personal Data (2026 Review)",
+    "category": "Reviews",
     "tags": [
-      "Finance",
-      "High-Yield",
-      "US Money"
+      "Reviews",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
     ],
-    "target_keyword": "top 5 cash back cards with no foreign transaction ",
+    "target_keyword": "best credit score monitoring apps privacy safe",
     "intent": "commercial",
-    "affiliate_focus": "Capital One Quicksilver, Chase Sapphire",
+    "affiliate_focus": "Experian CreditWorks, myFICO, Credit Karma",
     "status": "pending",
-    "projected_rpm": "$45 - $60/1000 views",
-    "mock_score": 88,
+    "projected_rpm": " - /1000 views",
+    "mock_score": 92,
     "mock_verdict": "APPROVED",
     "mock_simulation": {
-      "commercial_intent": "9/10",
-      "affiliate_readiness": "High Conversion Match",
-      "audit_timestamp": "2026-11-23T03:38:10.280636"
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
-    "mocked_at": "2026-11-23T03:38:10.280636",
-    "eligible_at": "2026-11-25T03:38:10.280636"
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-12-10T12:51:25.094065"
   }
 ]

@@ -42,7 +42,7 @@ class TopicGuard:
         now = datetime.now()
 
         # Generate candidates using Gemini if available, or structured fallback pool
-        new_items = self._generate_high_rpm_candidates(deficit)
+        new_items = self._generate_high_rpm_candidates(deficit, existing_topics=topics)
         
         for i, item in enumerate(new_items):
             tid = max_id + 1 + i
@@ -198,10 +198,46 @@ class TopicGuard:
         selected["id"] = 999000 + now.timetuple().tm_yday
         return selected
 
-    def _generate_high_rpm_candidates(self, count: int) -> list:
-        """Generates fallback high-RPM candidates to guarantee queue never starves."""
+    def _generate_high_rpm_candidates(self, count: int, existing_topics: list = None) -> list:
+        """Generates dynamic high-RPM candidates to guarantee queue never starves with zero duplicate titles."""
+        existing_titles = set()
+        if existing_topics:
+            for t in existing_topics:
+                title = t.get("topic", "").strip().lower()
+                if title:
+                    existing_titles.add(title)
+
+        results = []
+        # 1. Try Gemini dynamic candidate generation if client available
+        if self.client:
+            try:
+                categories = ["Banking", "Credit Cards", "Loans", "Investing", "Reviews"]
+                recent_sample = list(existing_titles)[-25:] if existing_titles else []
+                prompt = (
+                    f"Generate {count} unique, high-RPM US personal finance article topics for LedgerSpur.com in 2026.\n"
+                    f"Categories to balance: {categories}.\n"
+                    f"DO NOT duplicate any of these existing topics:\n{recent_sample}\n\n"
+                    f"Return a JSON array of objects with keys: topic, category, affiliate_focus, target_keyword, intent, projected_rpm."
+                )
+                resp = self.client.models.generate_content(
+                    model="gemini-3.6-flash",
+                    contents=prompt,
+                    config={"response_mime_type": "application/json"}
+                )
+                if resp.text:
+                    parsed = json.loads(resp.text)
+                    for item in parsed:
+                        t_title = item.get("topic", "").strip()
+                        if t_title and t_title.lower() not in existing_titles:
+                            results.append(item)
+                            existing_titles.add(t_title.lower())
+                            if len(results) >= count:
+                                return results
+            except Exception as e:
+                print(f"[!] Warning: Gemini topic replenishment fallback: {e}")
+
+        # 2. Rich structured fallback pool
         pool = [
-            ("Top 5 Cash Back Cards with No Foreign Transaction Fees for US Travelers", "Credit Cards", "Capital One Quicksilver, Chase Sapphire"),
             ("High-Yield Money Market Accounts vs CDs: Which Offers Better Liquidity?", "Banking", "Vanguard Cash Plus, Fidelity Bloom"),
             ("How to Consolidate $25,000 in Credit Card Debt with a Single Low-APR Loan", "Loans", "Upstart, Upgrade, Best Egg"),
             ("Roth 401(k) vs Traditional 401(k): Which Makes You Wealthier in Retirement?", "Investing", "Empower, Vanguard"),
@@ -210,17 +246,36 @@ class TopicGuard:
             ("How to Buy Physical Gold & Silver Inside an IRA: IRS Approved Custodians", "Investing", "Augusta Precious Metals, Birch Gold"),
             ("Home Equity Loan vs HELOC: How to Cash Out Equity Without Losing a 3% Mortgage", "Loans", "Figure, LendingTree, Rocket Mortgage"),
             ("Best Checking Accounts with Sign-Up Bonuses ($200 to $400 Cash Back in 2026)", "Banking", "Chase Total Checking, Wells Fargo, SoFi"),
-            ("The 50/30/20 Budget Rule: Complete Spreadsheet Template for Young Professionals", "Reviews", "YNAB, Monarch Money, Copilot")
+            ("The 50/30/20 Budget Rule: Complete Spreadsheet Template for Young Professionals", "Reviews", "YNAB, Monarch Money, Copilot"),
+            ("Chase Sapphire Preferred vs Capital One Venture Rewards: $95 Fee Faceoff", "Credit Cards", "Chase, Capital One"),
+            ("How to Build a Three-Fund Portfolio with Vanguard Index Funds", "Investing", "VTI, BND, VXUS"),
+            ("VA Loan vs Conventional Mortgage: Zero Down Payment Benefits for Military", "Loans", "Veterans United, Navy Federal"),
+            ("Best 2% Flat Cash Back Credit Cards with No Category Tracking", "Credit Cards", "Citi Double Cash, Wells Fargo Active Cash"),
+            ("Mega Backdoor Roth IRA: How High Earners Save $69,000 Tax-Free", "Investing", "Fidelity, Schwab"),
+            ("How to Cancel Private Mortgage Insurance (PMI) Early at 80% LTV", "Loans", "Rocket Mortgage, Better"),
+            ("Empower Personal Dashboard vs Quicken Simplifi: Net Worth Tracker Battle", "Reviews", "Empower, Simplifi"),
+            ("Best Checking Accounts for LLCs: Zero Monthly Fees and High APY", "Banking", "Novo, Found, Bluevine"),
+            ("Credit Card Retention Offers: How to Get Your Annual Fee Waived in 5 Minutes", "Credit Cards", "Amex, Chase"),
+            ("Target Date Funds vs S&P 500: Which Generates Superior 30-Year Returns?", "Investing", "Vanguard, Fidelity"),
+            ("Municipal Bonds for High Tax Brackets: Triple Tax-Free Yield Guide", "Investing", "VTEB, MUB")
         ]
-        results = []
-        for i in range(count):
-            item = pool[i % len(pool)]
+
+        # Filter out pool items that already exist in existing_titles
+        available_pool = [item for item in pool if item[0].lower() not in existing_titles and f"{item[0]} (2026 Guide)".lower() not in existing_titles]
+        if not available_pool:
+            available_pool = pool
+
+        for i in range(count - len(results)):
+            item = available_pool[i % len(available_pool)]
+            topic_name = f"{item[0]} (2026 Guide)"
             results.append({
-                "topic": f"{item[0]} (2026 Guide)",
+                "topic": topic_name,
                 "category": item[1],
                 "affiliate_focus": item[2],
                 "target_keyword": item[0].lower()[:50],
                 "intent": "commercial",
-                "projected_rpm": "$45 - $60/1000 views"
+                "projected_rpm": "$45 - $65/1000 views"
             })
+            existing_titles.add(topic_name.lower())
+
         return results
