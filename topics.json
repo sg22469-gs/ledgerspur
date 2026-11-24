@@ -1514,7 +1514,7 @@
     "target_keyword": "best checking account bonuses 2026",
     "intent": "commercial",
     "affiliate_focus": "Chase Total Checking, Wells Fargo, SoFi Checking",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": " - /1000 views",
     "mock_score": 92,
     "mock_verdict": "APPROVED",
@@ -1524,7 +1524,12 @@
       "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
     "mocked_at": "2026-11-24T00:51:25.094065",
-    "eligible_at": "2026-11-26T12:51:25.094065"
+    "eligible_at": "2026-11-26T12:51:25.094065",
+    "published_at": "2026-11-24T22:57:46.475189",
+    "url": "https://ledgerspur.com/posts/best-checking-accounts-with-sign-up-bonuses-claim-to-cash-back-in-2026.html",
+    "slug": "best-checking-accounts-with-sign-up-bonuses-claim-to-cash-back-in-2026",
+    "meta_description": "Discover the best checking accounts with sign-up bonuses in 2026. Compare top US bank offers, claim big cash-back rewards, and earn extra money today.",
+    "title": "Best Checking Accounts with Sign-Up Bonuses: Claim  to  Cash Back in 2026"
   },
   {
     "id": 59,
@@ -2249,5 +2254,29 @@
     },
     "mocked_at": "2026-11-24T00:42:07.607351",
     "eligible_at": "2026-11-26T00:42:07.607351"
+  },
+  {
+    "id": 88,
+    "topic": "HELOC vs. Cash-Out Refinance in 2026: How to Tap Home Equity Without Giving Up Your Low Mortgage Rate",
+    "category": "Loans",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "heloc vs cash out refinance",
+    "intent": "Commercial / High-Intent",
+    "affiliate_focus": "HELOC Lenders, Home Equity Investment Platforms, and Mortgage Refinancers",
+    "status": "pending",
+    "projected_rpm": "$65 - $95",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-24T22:57:46.479444"
+    },
+    "mocked_at": "2026-11-24T22:57:46.479444",
+    "eligible_at": "2026-11-26T22:57:46.479444"
   }
 ]
