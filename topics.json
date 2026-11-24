@@ -1484,7 +1484,7 @@
     "target_keyword": "money market account vs cd liquidity",
     "intent": "commercial",
     "affiliate_focus": "Vanguard Cash Plus, Fidelity Bloom, Marcus",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": " - /1000 views",
     "mock_score": 91,
     "mock_verdict": "APPROVED",
@@ -1494,7 +1494,12 @@
       "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
     "mocked_at": "2026-11-24T00:51:25.094065",
-    "eligible_at": "2026-11-26T00:51:25.094065"
+    "eligible_at": "2026-11-26T00:51:25.094065",
+    "published_at": "2026-11-24T00:42:07.603112",
+    "url": "https://ledgerspur.com/posts/high-yield-money-market-accounts-vs-cds-which-offers-superior-liquidity-in-2026.html",
+    "slug": "high-yield-money-market-accounts-vs-cds-which-offers-superior-liquidity-in-2026",
+    "meta_description": "Compare High-Yield Money Market Accounts vs CDs in 2026. Learn which account offers superior liquidity, flexibility, and high yields for your savings.",
+    "title": "High-Yield Money Market Accounts vs CDs: Which Offers Superior Liquidity in 2026?"
   },
   {
     "id": 58,
@@ -2220,5 +2225,29 @@
     },
     "mocked_at": "2026-11-24T00:51:25.094065",
     "eligible_at": "2026-12-10T12:51:25.094065"
+  },
+  {
+    "id": 87,
+    "topic": "HELOC vs. Home Equity Loan vs. Cash-Out Refinance: Best Ways to Access Home Equity in 2026",
+    "category": "Loans",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "heloc vs home equity loan vs cash out refinance",
+    "intent": "Commercial / Transactional",
+    "affiliate_focus": "Home Equity Lenders & Refinance Platforms (Figure, Spring EQ, Discover Home Loans)",
+    "status": "pending",
+    "projected_rpm": "$78.50",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-24T00:42:07.607351"
+    },
+    "mocked_at": "2026-11-24T00:42:07.607351",
+    "eligible_at": "2026-11-26T00:42:07.607351"
   }
 ]
