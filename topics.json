@@ -1544,7 +1544,7 @@
     "target_keyword": "are bank bonuses taxable 1099 int",
     "intent": "commercial",
     "affiliate_focus": "TurboTax, H&R Block, Marcus",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": " - /1000 views",
     "mock_score": 93,
     "mock_verdict": "APPROVED",
@@ -1554,7 +1554,12 @@
       "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
     "mocked_at": "2026-11-24T00:51:25.094065",
-    "eligible_at": "2026-11-27T00:51:25.094065"
+    "eligible_at": "2026-11-27T00:51:25.094065",
+    "published_at": "2026-11-25T05:23:08.815640",
+    "url": "https://ledgerspur.com/posts/bank-account-bonuses-and-taxes-how-to-report-1099-int-on-checking-savings-promos.html",
+    "slug": "bank-account-bonuses-and-taxes-how-to-report-1099-int-on-checking-savings-promos",
+    "meta_description": "Earned a bank account bonus? Learn how to report checking and savings promotions on your US tax return using Form 1099-INT. File your taxes correctly!",
+    "title": "Bank Account Bonuses and Taxes: How to Report 1099-INT on Checking & Savings Promos"
   },
   {
     "id": 60,
@@ -2278,5 +2283,29 @@
     },
     "mocked_at": "2026-11-24T22:57:46.479444",
     "eligible_at": "2026-11-26T22:57:46.479444"
+  },
+  {
+    "id": 89,
+    "topic": "HELOC vs Home Equity Loan in 2026: How to Tap Equity Without Touching Your Low Fixed Mortgage Rate",
+    "category": "Loans",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "heloc vs home equity loan 2026",
+    "intent": "Commercial / Transactional",
+    "affiliate_focus": "HELOC & Home Equity Lenders (Figure, SpringEQ, Discover)",
+    "status": "pending",
+    "projected_rpm": "$78.50",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-25T05:23:08.819265"
+    },
+    "mocked_at": "2026-11-25T05:23:08.819265",
+    "eligible_at": "2026-11-27T05:23:08.819265"
   }
 ]
