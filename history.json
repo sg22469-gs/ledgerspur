@@ -1563,5 +1563,35 @@
     "slug": "bank-account-bonuses-and-taxes-how-to-report-1099-int-on-checking-savings-promos",
     "meta_description": "Earned a bank account bonus? Learn how to report checking and savings promotions on your US tax return using Form 1099-INT. File your taxes correctly!",
     "title": "Bank Account Bonuses and Taxes: How to Report 1099-INT on Checking & Savings Promos"
+  },
+  {
+    "id": 60,
+    "topic": "Best Business Checking Accounts for LLCs: Zero Monthly Fees and High APY Yields",
+    "category": "Banking",
+    "tags": [
+      "Banking",
+      "Personal Finance",
+      "US Wealth",
+      "2026 Guide"
+    ],
+    "target_keyword": "best business checking accounts llc zero fees",
+    "intent": "commercial",
+    "affiliate_focus": "Found, Novo, Bluevine, Chase Business",
+    "status": "published",
+    "projected_rpm": " - /1000 views",
+    "mock_score": 94,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9.5/10",
+      "affiliate_readiness": "High Conversion Direct Match",
+      "audit_timestamp": "2026-11-24T00:51:25.094065"
+    },
+    "mocked_at": "2026-11-24T00:51:25.094065",
+    "eligible_at": "2026-11-27T12:51:25.094065",
+    "published_at": "2026-11-25T22:25:51.827057",
+    "url": "https://ledgerspur.com/posts/best-business-checking-accounts-for-llcs-zero-monthly-fees-and-high-apy-yields.html",
+    "slug": "best-business-checking-accounts-for-llcs-zero-monthly-fees-and-high-apy-yields",
+    "meta_description": "Compare the best business checking accounts for LLCs. Find top-rated options with zero monthly fees and high APY yields to grow your company cash.",
+    "title": "Best Business Checking Accounts for LLCs: Zero Monthly Fees and High APY Yields"
   }
 ]

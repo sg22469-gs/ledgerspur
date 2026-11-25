@@ -1574,7 +1574,7 @@
     "target_keyword": "best business checking accounts llc zero fees",
     "intent": "commercial",
     "affiliate_focus": "Found, Novo, Bluevine, Chase Business",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": " - /1000 views",
     "mock_score": 94,
     "mock_verdict": "APPROVED",
@@ -1584,7 +1584,12 @@
       "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
     "mocked_at": "2026-11-24T00:51:25.094065",
-    "eligible_at": "2026-11-27T12:51:25.094065"
+    "eligible_at": "2026-11-27T12:51:25.094065",
+    "published_at": "2026-11-25T22:25:51.827057",
+    "url": "https://ledgerspur.com/posts/best-business-checking-accounts-for-llcs-zero-monthly-fees-and-high-apy-yields.html",
+    "slug": "best-business-checking-accounts-for-llcs-zero-monthly-fees-and-high-apy-yields",
+    "meta_description": "Compare the best business checking accounts for LLCs. Find top-rated options with zero monthly fees and high APY yields to grow your company cash.",
+    "title": "Best Business Checking Accounts for LLCs: Zero Monthly Fees and High APY Yields"
   },
   {
     "id": 61,
@@ -2307,5 +2312,29 @@
     },
     "mocked_at": "2026-11-25T05:23:08.819265",
     "eligible_at": "2026-11-27T05:23:08.819265"
+  },
+  {
+    "id": 90,
+    "topic": "Solo 401(k) vs SEP IRA in 2026: Which Retirement Plan Saves Self-Employed High Earners More Money?",
+    "category": "Investing",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "solo 401k vs sep ira self employed",
+    "intent": "Commercial",
+    "affiliate_focus": "Solo 401(k) & SEP IRA Custodians (Fidelity, Vanguard, Carry, E*TRADE)",
+    "status": "pending",
+    "projected_rpm": "$85 - $120",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-25T22:25:51.831475"
+    },
+    "mocked_at": "2026-11-25T22:25:51.831475",
+    "eligible_at": "2026-11-27T22:25:51.831475"
   }
 ]
