@@ -2253,7 +2253,7 @@
     "target_keyword": "heloc vs home equity loan vs cash out refinance",
     "intent": "Commercial / Transactional",
     "affiliate_focus": "Home Equity Lenders & Refinance Platforms (Figure, Spring EQ, Discover Home Loans)",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": "$78.50",
     "mock_score": 88,
     "mock_verdict": "APPROVED",
@@ -2263,7 +2263,12 @@
       "audit_timestamp": "2026-11-24T00:42:07.607351"
     },
     "mocked_at": "2026-11-24T00:42:07.607351",
-    "eligible_at": "2026-11-26T00:42:07.607351"
+    "eligible_at": "2026-11-26T00:42:07.607351",
+    "published_at": "2026-11-26T04:50:59.819054",
+    "url": "https://ledgerspur.com/posts/heloc-vs-home-equity-loan-vs-cash-out-refinance-best-ways-to-access-home-equity-in-2026.html",
+    "slug": "heloc-vs-home-equity-loan-vs-cash-out-refinance-best-ways-to-access-home-equity-in-2026",
+    "meta_description": "Compare HELOCs, home equity loans, and cash-out refinances to find the best way to access home equity in 2026. Choose the best financial option today.",
+    "title": "HELOC vs. Home Equity Loan vs. Cash-Out Refinance: Best Ways to Access Home Equity in 2026"
   },
   {
     "id": 88,
@@ -2336,5 +2341,29 @@
     },
     "mocked_at": "2026-11-25T22:25:51.831475",
     "eligible_at": "2026-11-27T22:25:51.831475"
+  },
+  {
+    "id": 91,
+    "topic": "Best Debt Consolidation Loans of 2026: How to Cut Your Interest Rate in Half",
+    "category": "Loans",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "best debt consolidation loans 2026",
+    "intent": "Transactional / Commercial",
+    "affiliate_focus": "SoFi Personal Loans, LightStream, Marcus by Goldman Sachs, Upstart",
+    "status": "pending",
+    "projected_rpm": "$75 - $110",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-26T04:50:59.822839"
+    },
+    "mocked_at": "2026-11-26T04:50:59.822839",
+    "eligible_at": "2026-11-28T04:50:59.822839"
   }
 ]
