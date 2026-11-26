@@ -1604,7 +1604,7 @@
     "target_keyword": "earn 5 percent interest without cd lock in",
     "intent": "commercial",
     "affiliate_focus": "SoFi, UFB Direct, Wealthfront Cash",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": " - /1000 views",
     "mock_score": 95,
     "mock_verdict": "APPROVED",
@@ -1614,7 +1614,12 @@
       "audit_timestamp": "2026-11-24T00:51:25.094065"
     },
     "mocked_at": "2026-11-24T00:51:25.094065",
-    "eligible_at": "2026-11-28T00:51:25.094065"
+    "eligible_at": "2026-11-28T00:51:25.094065",
+    "published_at": "2026-11-26T22:16:39.628924",
+    "url": "https://ledgerspur.com/posts/how-to-earn-5-on-cash-without-locking-funds-in-a-long-term-certificate-of-deposit.html",
+    "slug": "how-to-earn-5-on-cash-without-locking-funds-in-a-long-term-certificate-of-deposit",
+    "meta_description": "Earn 5%+ APY on cash with full liquidity. Explore top US high-yield savings and flexible money market accounts without locking funds in long-term CDs.",
+    "title": "How to Earn 5%+ on Cash Without Locking Funds in a Long-Term Certificate of Deposit"
   },
   {
     "id": 62,
@@ -2365,5 +2370,29 @@
     },
     "mocked_at": "2026-11-26T04:50:59.822839",
     "eligible_at": "2026-11-28T04:50:59.822839"
+  },
+  {
+    "id": 92,
+    "topic": "Best 0% APR Balance Transfer Credit Cards of 2026: How to Pause Interest for up to 21 Months",
+    "category": "Credit Cards",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "best 0 apr balance transfer credit cards 2026",
+    "intent": "Commercial / Transactional",
+    "affiliate_focus": "Balance Transfer Credit Cards (e.g., Citi Simplicity, Wells Fargo Reflect, Bank-Americard)",
+    "status": "pending",
+    "projected_rpm": "$68 - $92",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-26T22:16:39.632719"
+    },
+    "mocked_at": "2026-11-26T22:16:39.632719",
+    "eligible_at": "2026-11-28T22:16:39.632719"
   }
 ]
