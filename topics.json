@@ -2316,7 +2316,7 @@
     "target_keyword": "heloc vs home equity loan 2026",
     "intent": "Commercial / Transactional",
     "affiliate_focus": "HELOC & Home Equity Lenders (Figure, SpringEQ, Discover)",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": "$78.50",
     "mock_score": 88,
     "mock_verdict": "APPROVED",
@@ -2326,7 +2326,12 @@
       "audit_timestamp": "2026-11-25T05:23:08.819265"
     },
     "mocked_at": "2026-11-25T05:23:08.819265",
-    "eligible_at": "2026-11-27T05:23:08.819265"
+    "eligible_at": "2026-11-27T05:23:08.819265",
+    "published_at": "2026-11-27T21:52:26.263034",
+    "url": "https://ledgerspur.com/posts/heloc-vs-home-equity-loan-in-2026-how-to-tap-equity-without-touching-your-low-fixed-mortgage-rate.html",
+    "slug": "heloc-vs-home-equity-loan-in-2026-how-to-tap-equity-without-touching-your-low-fixed-mortgage-rate",
+    "meta_description": "Compare HELOC vs home equity loan options in 2026. Discover how to tap home equity without refinancing or losing your current low fixed mortgage rate.",
+    "title": "HELOC vs Home Equity Loan in 2026: How to Tap Equity Without Touching Your Low Fixed Mortgage Rate"
   },
   {
     "id": 90,
@@ -2423,5 +2428,29 @@
     },
     "mocked_at": "2026-11-27T04:54:29.765525",
     "eligible_at": "2026-11-29T04:54:29.765525"
+  },
+  {
+    "id": 94,
+    "topic": "Robinhood Gold Review 2026: Is the 3% IRA Match, High APY & Low Margin Rate Worth the Annual Fee?",
+    "category": "Reviews",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "robinhood gold review 2026",
+    "intent": "Commercial",
+    "affiliate_focus": "Robinhood Gold Accounts & Brokerage Promotions",
+    "status": "pending",
+    "projected_rpm": "$68.50",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-27T21:52:26.266946"
+    },
+    "mocked_at": "2026-11-27T21:52:26.266946",
+    "eligible_at": "2026-11-29T21:52:26.266946"
   }
 ]
