@@ -2345,7 +2345,7 @@
     "target_keyword": "solo 401k vs sep ira self employed",
     "intent": "Commercial",
     "affiliate_focus": "Solo 401(k) & SEP IRA Custodians (Fidelity, Vanguard, Carry, E*TRADE)",
-    "status": "pending",
+    "status": "published",
     "projected_rpm": "$85 - $120",
     "mock_score": 88,
     "mock_verdict": "APPROVED",
@@ -2355,7 +2355,12 @@
       "audit_timestamp": "2026-11-25T22:25:51.831475"
     },
     "mocked_at": "2026-11-25T22:25:51.831475",
-    "eligible_at": "2026-11-27T22:25:51.831475"
+    "eligible_at": "2026-11-27T22:25:51.831475",
+    "published_at": "2026-11-28T04:39:01.423854",
+    "url": "https://ledgerspur.com/posts/solo-401-k-vs-sep-ira-in-2026-which-retirement-plan-saves-self-employed-high-earners-more-money.html",
+    "slug": "solo-401-k-vs-sep-ira-in-2026-which-retirement-plan-saves-self-employed-high-earners-more-money",
+    "meta_description": "Compare Solo 401(k) vs SEP IRA rules for 2026. Discover which retirement plan gives self-employed high earners maximum tax savings and higher limits.",
+    "title": "Solo 401(k) vs SEP IRA in 2026: Which Retirement Plan Saves Self-Employed High Earners More Money?"
   },
   {
     "id": 91,
@@ -2452,5 +2457,29 @@
     },
     "mocked_at": "2026-11-27T21:52:26.266946",
     "eligible_at": "2026-11-29T21:52:26.266946"
+  },
+  {
+    "id": 95,
+    "topic": "Best Debt Consolidation Loans for High-Interest Credit Card Debt in 2026: Top Lenders with Direct Payoff",
+    "category": "Loans",
+    "tags": [
+      "Finance",
+      "High-Yield",
+      "US Money"
+    ],
+    "target_keyword": "best debt consolidation loans for credit card debt 2026",
+    "intent": "Transactional / Commercial",
+    "affiliate_focus": "Personal loan marketplace partners (SoFi, Marcus, Upgrade, LightStream)",
+    "status": "pending",
+    "projected_rpm": "$75 - $110",
+    "mock_score": 88,
+    "mock_verdict": "APPROVED",
+    "mock_simulation": {
+      "commercial_intent": "9/10",
+      "affiliate_readiness": "High Conversion Match",
+      "audit_timestamp": "2026-11-28T04:39:01.428541"
+    },
+    "mocked_at": "2026-11-28T04:39:01.428541",
+    "eligible_at": "2026-11-30T04:39:01.428541"
   }
 ]
